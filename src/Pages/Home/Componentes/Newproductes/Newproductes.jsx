@@ -7,15 +7,11 @@ import { newproductdata } from './Newproduct';
 
 const Newproductes = () => {
     const { t } = useTranslation();
-
-    // ✅ Start with 5 items
     const [visibleCount, setVisibleCount] = useState(5);
 
     const loadMore = () => {
         setVisibleCount((prev) => prev + 5);
     };
-
-    // Optional debug log
     useEffect(() => {
         console.log('Visible product count:', visibleCount);
     }, [visibleCount]);
@@ -41,8 +37,6 @@ const Newproductes = () => {
                             </div>
                         </div>
                     </div>
-
-                    {/* Product Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 mt-8">
                         {newproductdata.slice(0, visibleCount).map((product) => (
                             <div key={product.id} className="px-2">
@@ -58,8 +52,6 @@ const Newproductes = () => {
                             </div>
                         ))}
                     </div>
-
-
                     {visibleCount < newproductdata.length ? (
                         <div className="flex justify-center mt-8">
                             <button
