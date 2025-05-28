@@ -27,7 +27,7 @@ const Newproductes = () => {
                         </h3>
                         <div className='flex items-center gap-x-2 justify-end'>
                             <span className='font-Montserrat font-normal text-base'>
-                                {t("Sort by")}
+                                {t("Sort by:")}
                             </span>
                             <div className='w-[150px]'>
                                 <Allctagorimenu

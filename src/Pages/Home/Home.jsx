@@ -7,6 +7,7 @@ import Support from './Componentes/Support/Support';
 import FeaturedProducts from './Componentes/FeaturedProducts/FeaturedProducts';
 import Overview from './Componentes/Overview';
 import NewProducts from './Componentes/Newproductes/Newproductes';
+import Springsale from './Componentes/Springsale/Springsale';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -22,6 +23,7 @@ const Home = () => {
                 <Overview />
                 <NewProducts />
             </Container>
+            <Springsale />
         </>
     );
 };
