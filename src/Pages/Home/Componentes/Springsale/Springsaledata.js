@@ -20,7 +20,7 @@ export const Springsaledata =[
         rate:1,
         totalrating:120,
         price:999.00,
-        discout: null,
+        discout: 11,
         stock:1500,
         sold:90
     },
