@@ -1,21 +1,40 @@
 const RenderCountdown = ({ days, hours, minutes, seconds }) => {
     return (
-        <div className="flex items-center space-x-3 text-sm">
-            <div className="grid grid-cols-1 items-center gap-1">
-                <span className="text-gray-700">Days<span className="gap-x-[24px]">:</span></span>
-                <span className="font-semibold">{days}</span>
+        <div className="flex space-x-10">
+            <div className="text-center">
+                <h4 className="font-Poppins font-semibold text-[36px] text-orange ">
+                    {days}
+                </h4>
+                <span className="font-Montserrat font-normal text-base text-black01">
+                    Days
+                </span>
             </div>
-            <div className="flex items-center gap-1">
-                <span className="text-gray-700">Hours:</span>
-                <span className="font-semibold text-red-600">{hours}</span>
+            <span className="text-orange text-[36px] leading-[1]">:</span>
+            <div className="text-center">
+                <h4 className="font-Poppins font-semibold text-[36px] text-orange ">
+                    {hours}
+                </h4>
+                <span className="font-Montserrat font-normal text-base text-black01">
+                    Hours
+                </span>
             </div>
-            <div className="flex items-center gap-1">
-                <span className="text-gray-700">Minutes:</span>
-                <span className="font-semibold text-red-600">{minutes}</span>
+            <span className="text-orange text-[36px] leading-[1]">:</span>
+            <div className="text-center">
+                <h4 className="font-Poppins font-semibold text-[36px] text-orange ">
+                    {minutes}
+                </h4>
+                <span className="font-Montserrat font-normal text-base text-black01">
+                    Minutes
+                </span>
             </div>
-            <div className="flex items-center gap-1">
-                <span className="text-gray-700">Seconds:</span>
-                <span className="font-semibold text-red-600">{seconds}</span>
+            <span className="text-orange text-[36px] leading-[1]">:</span>
+            <div className="text-center">
+                <h4 className="font-Poppins font-semibold text-[36px] text-orange ">
+                    {seconds}
+                </h4>
+                <span className="font-Montserrat font-normal text-base text-black01">
+                    Seconds
+                </span>
             </div>
         </div>
     );
