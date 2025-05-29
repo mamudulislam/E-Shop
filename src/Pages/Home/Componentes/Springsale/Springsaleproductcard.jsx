@@ -6,7 +6,7 @@ import { gotDiscounty } from '../../../../Utils/gotDiscounty';
 
 const ProductCard = ({ image, pCatagori, pName, rate, totalrating, price, pdiscout }) => {
     return (
-        <div className="group relative border border-transparent hover:border-black01 p-6 rounded-[10px] w-[285px]">
+        <div className="group relative hover:bg-white p-6 rounded-[10px] w-[285px]">
             <div className="relative w-full overflow-hidden h-[345px] rounded-[10px]">
                 <img src={image} alt="product" className="w-full h-full object-cover" />
                 {pdiscout && (
