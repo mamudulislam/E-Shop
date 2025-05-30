@@ -96,7 +96,7 @@ const FeaturedProducts = () => {
                             {Featureddata?.map((product) => (
                                 <div key={product.id} className='px-2'>
                                     <ProductCard
-                                        image={product?.imges}
+                                        imges={product?.imges}
                                         pCatagori={product?.pCatagori}
                                         pName={product?.pName}
                                         rate={product?.rate}

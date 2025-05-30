@@ -1,5 +1,5 @@
 export const gotDiscounty =(price,discout)=>{
-    if (!price || !discout <= 0)return price;
-    return price - (price * discout)/100
-  
+    if (!discout || discout <= 0)return price;
+  const discountedPrice = price - (price * discout) / 100;
+  return parseFloat(discountedPrice.toFixed(2));  
 }

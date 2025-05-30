@@ -1,10 +1,14 @@
 import React from 'react';
-import { Tooltip } from 'antd';
+import { Progress, Tooltip } from 'antd';
 import { Link } from 'react-router-dom';
 import { getstar } from '../../../../Utils/genaretrating';
 import { gotDiscounty } from '../../../../Utils/gotDiscounty';
+import usestokstatus from '../../hooks/usestokstatus';
 
-const ProductCard = ({ image, pCatagori, pName, rate, totalrating, price, pdiscout }) => {
+
+const ProductCard = ({ image, pCatagori, pName, rate, totalrating, price, pdiscout, stock, sold }) => {
+    const { status, color, percentage } = usestokstatus(stock, sold)
+    console.log("stock status:", status, "color:", color, "percentage", percentage)
     return (
         <div className="group relative hover:bg-white p-6 rounded-[10px] w-[285px]">
             <div className="relative w-full overflow-hidden h-[345px] rounded-[10px]">
@@ -53,6 +57,16 @@ const ProductCard = ({ image, pCatagori, pName, rate, totalrating, price, pdisco
                         ${gotDiscounty(price, pdiscout)}
                     </p>
                 </div>
+                <div className='w-full bg-white01 rounded-xl relative h-6'>
+                    <div
+                        className="absolute top-0 left-0 h-full rounded-xl transition duration-300 ease-in-out"
+                        style={{ width: `${percentage}%`, background: color }}
+                    />
+                    <h5 className='text-center z-10 relative'>
+                        {status}
+                    </h5>
+                </div>
+
             </div>
         </div >
     );

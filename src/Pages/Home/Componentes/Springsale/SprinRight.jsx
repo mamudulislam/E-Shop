@@ -55,12 +55,14 @@ const SprinRight = () => {
                     <div key={product.id} className='px-2'>
                         <Springsaleproductcard
                             image={product?.imges}
-                            pCatagori={product?.pCatagori}
-                            pName={product?.pName}
-                            rate={product?.rate}
-                            totalrating={product?.totalrating}
-                            price={product?.price}
-                            pdiscout={product?.discout}
+                            pCatagori={product.pCatagori}
+                            pName={product.pName}
+                            rate={product.rate}
+                            totalrating={product.totalrating}
+                            price={product.price}
+                            pdiscout={product.discout}
+                            stock={product.stock}
+                            sold={product.sold}
                         />
                     </div>
                 ))}

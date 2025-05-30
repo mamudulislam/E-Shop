@@ -3,14 +3,14 @@ export const Springsaledata =[
     {
         id:1,
         imges:Productimg,
-        pCatagori:"P H O N E",
+        pCatagori:"P H O N E11",
         pName:"JPhone 13 High Quality..",
         rate:1.5,
         totalrating:120,
         price: 999.00,
         discout: 10,
-        stock:1500,
-        sold:90
+        stock:300,
+        sold:1500
     },
     {
         id:2,
