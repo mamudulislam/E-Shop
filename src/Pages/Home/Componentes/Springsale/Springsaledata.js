@@ -9,8 +9,8 @@ export const Springsaledata =[
         totalrating:120,
         price: 999.00,
         discout: 10,
-        stock:300,
-        sold:1500
+        stock:100,
+        sold:50
     },
     {
         id:2,
@@ -21,8 +21,8 @@ export const Springsaledata =[
         totalrating:120,
         price:999.00,
         discout: 11,
-        stock:1500,
-        sold:90
+        stock:1000,
+        sold:920
     },
     {
         id: 3,
@@ -33,8 +33,8 @@ export const Springsaledata =[
         totalrating: 120,
         price: 999.00,
         discout: 10,
-        stock:1500,
-        sold:90
+        stock:null,
+        sold:30
     },
     {
         id:4,
@@ -45,7 +45,7 @@ export const Springsaledata =[
         totalrating:120,
         price: 999.00,
         discout: 10,
-        stock:1500,
+        stock:150,
         sold:90
     },
     {
@@ -56,8 +56,8 @@ export const Springsaledata =[
         rate:5,
         totalrating:120,
         price: 999.00,
-        discout: null,
-        stock:1500,
+        discout: 14,
+        stock:440,
         sold:90
     },
 ]

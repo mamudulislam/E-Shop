@@ -62,7 +62,7 @@ const ProductCard = ({ image, pCatagori, pName, rate, totalrating, price, pdisco
                         className="absolute top-0 left-0 h-full rounded-xl transition duration-300 ease-in-out"
                         style={{ width: `${percentage}%`, background: color }}
                     />
-                    <h5 className='text-center z-10 relative'>
+                    <h5 className='text-center z-10 relative text-amber-50 uppercase font-Poppins font-bold text-[16px] leading-[24px]'>
                         {status}
                     </h5>
                 </div>
