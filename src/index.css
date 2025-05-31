@@ -21,3 +21,40 @@
 .custom-select .ant-select-selector {
     border: none !important;
 }
+
+.Custom-collapse {
+    background-color: white;
+    border-radius: 6px;
+    padding: 8px;
+    border: none !important;
+}
+
+.Custom-collapse .ant-collapse-content {
+    border-top: none !important;
+    background-color: white;
+}
+
+.Custom-collapse .ant-collapse-expand-icon {
+    background-color: #FF624C !important;
+    color: white !important;
+    border-radius: 50% !important;
+    width: 32px !important;
+    height: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+:where(.css-dev-only-do-not-override-5uvb3z).ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-expand-icon {
+    padding-inline-end: 1px !important;
+}
+
+.ant-collapse-header-text {
+    padding-top: 1px;
+    padding-left: 32px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #303030;
+}
