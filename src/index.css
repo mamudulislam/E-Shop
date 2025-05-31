@@ -46,7 +46,7 @@
 }
 
 :where(.css-dev-only-do-not-override-5uvb3z).ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-expand-icon {
-    padding-inline-end: 1px !important;
+    padding-left: 11px !important;
 }
 
 .ant-collapse-header-text {
