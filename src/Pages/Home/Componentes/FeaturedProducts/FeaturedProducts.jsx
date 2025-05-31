@@ -95,19 +95,23 @@ const FeaturedProducts = () => {
                         <Slider {...settings}>
                             {Featureddata?.map((product) => (
                                 <div key={product.id} className='px-2'>
-                                    <ProductCard
-                                        imges={product?.imges}
-                                        pCatagori={product?.pCatagori}
-                                        pName={product?.pName}
-                                        rate={product?.rate}
-                                        totalrating={product?.totalrating}
-                                        price={product?.price}
-                                        pdiscout={product?.discout}
-                                    />
+                                    <div className='border border-transparent hover:border-black01 transition duration-300 rounded-md p-2'>
+                                        <ProductCard
+                                            imges={product?.imges}
+                                            pCatagori={product?.pCatagori}
+                                            pName={product?.pName}
+                                            rate={product?.rate}
+                                            totalrating={product?.totalrating}
+                                            price={product?.price}
+                                            pdiscout={product?.discout}
+                                        />
+                                    </div>
                                 </div>
                             ))}
                         </Slider>
                     </div>
+
+
                 </div>
             </Container>
         </>
