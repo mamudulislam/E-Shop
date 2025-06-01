@@ -18,7 +18,8 @@ const Faqright = () => {
                         {t("Ask A Question")}
                     </span>
                 </Commonbuttun>
-            </div></>
+            </div>
+        </>
 
     )
 }
