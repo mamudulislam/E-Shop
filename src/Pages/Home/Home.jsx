@@ -10,6 +10,7 @@ import NewProducts from './Componentes/Newproductes/Newproductes';
 import Springsale from './Componentes/Springsale/Springsale';
 import Bestseller from './Componentes/Bestseller/Bestseller';
 import Faq from './Componentes/FAQ/Faq';
+import TechTalk from './Componentes/TechTalk/TechTalk';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -30,6 +31,9 @@ const Home = () => {
                 <Bestseller />
             </Container>
             <Faq />
+            <Container>
+                <TechTalk />
+            </Container>
         </>
     );
 };
