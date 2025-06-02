@@ -42,11 +42,6 @@ const BlogCard = ({ pathname, ...props }) => {
             <>
                 <div>
                     <div className="max-h-[406px] bg-amber-400 rounded-[25px] overflow-hidden">
-                        {/* <img
-              src={image}
-              alt="blog image"
-              className="w-full h-full object-cover"
-            /> */}
                         this is my blog card
                     </div>
                 </div>
