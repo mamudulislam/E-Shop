@@ -11,6 +11,7 @@ import Springsale from './Componentes/Springsale/Springsale';
 import Bestseller from './Componentes/Bestseller/Bestseller';
 import Faq from './Componentes/FAQ/Faq';
 import TechTalk from './Componentes/TechTalk/TechTalk';
+import Companies from './Componentes/Companies';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -33,6 +34,7 @@ const Home = () => {
             <Faq />
             <Container>
                 <TechTalk />
+                <Companies />
             </Container>
         </>
     );
