@@ -22,7 +22,7 @@ const BestsellerLeft = () => {
                 <div className='grid grid-cols-3 gap-2'>
                     {Featureddata.map((product) => (
                         <div key={product.id}>
-                            <div className='border border-transparent hover:border-black01 transition duration-300 rounded-md'>
+                            <div className='border border-transparent transition duration-300 rounded-md'>
                                 <ProductCard
                                     imges={product?.imges}
                                     pCatagori={product?.pCatagori}

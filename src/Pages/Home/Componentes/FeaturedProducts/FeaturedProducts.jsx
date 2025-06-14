@@ -36,8 +36,6 @@ function PrevArrow(props) {
 
 const FeaturedProducts = () => {
     const { t } = useTranslation();
-
-    // Slider settings that match your grid layout
     const settings = {
         dots: true,
         infinite: true,
@@ -89,13 +87,11 @@ const FeaturedProducts = () => {
                             </span>
                         </Link>
                     </div>
-
-                    {/* Slider with custom arrows */}
                     <div className='slider-container relative'>
                         <Slider {...settings}>
                             {Featureddata?.map((product) => (
                                 <div key={product.id} className='px-2'>
-                                    <div className='border border-transparent hover:border-black01 transition duration-300 rounded-md p-2'>
+                                    <div className='border border-transparent transition duration-300 rounded-md p-2'>
                                         <ProductCard
                                             imges={product?.imges}
                                             pCatagori={product?.pCatagori}
