@@ -1,11 +1,14 @@
 import React from 'react'
-
+import Subscribeform from '../../../../Golobalcomponentes/Subscribe/form/Subscribeform'
 const Subscribe = () => {
     return (
         <div className='mt-20'>
-            <div className='py-[114px] px-[100px] rounded-[25px] bg-gray grid grid-cols-[594px_1fr]'>
-                <div className='bg-red'>1</div>
-                <div className='bg-orange'>2</div>
+            <div className='rounded-[25px] bg-gray grid grid-cols-[2fr_3fr] overflow-hidden'>
+                <div className='bg-linear-to-r from-white02 to-gray py-[114px] pl-[100px]'>
+                    <Subscribeform />
+                </div>
+                <div className='bg-gray'>
+                </div>
             </div>
         </div>
     )
