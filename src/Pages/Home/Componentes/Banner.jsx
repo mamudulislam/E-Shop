@@ -2,7 +2,7 @@ import BannerImage from "../../../assets/Img/Banner.png"
 
 const Banner = () => {
     return (
-        <img src={BannerImage} alt="Banner..." />
+        <img src={BannerImage} alt="Banner..." className="mt-[32px]" />
     )
 }
 

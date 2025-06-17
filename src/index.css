@@ -19,6 +19,13 @@
     --color-white02: #F4F4F4;
     --color-black100: #30303038;
     --color-black200: #828282;
+    --breakpoint-xs: 320px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+    --breakpoint-3xl: 1700px;
 }
 
 .custom-select .ant-select-selector {
@@ -84,4 +91,10 @@
     font-weight: 400 !important;
     line-height: 30px !important;
     color: #303030 !important;
+}
+
+.ant_drawer .ant-drawer-close {
+    position: absolute;
+    top: 15px;
+    right: 0;
 }

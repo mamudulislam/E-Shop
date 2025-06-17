@@ -45,7 +45,7 @@ const Socialwhitelang = () => {
     };
 
     return (
-        <div className='flex items-center w-full gap-x-5 justify-end'>
+        <div className='flex items-center w-full gap-x-2 lg:gap-x-5 lg:justify-end'>
             <div>
                 <Select
                     defaultValue={currencyOptions[0].value}
@@ -55,7 +55,7 @@ const Socialwhitelang = () => {
                     className="custom-select"
                 />
             </div>
-            <div className='w-[1px] h-[32px] bg-black01'></div>
+            <div className='w-[1px] h-[32px] bg-black100'></div>
             <div>
                 <Select
                     defaultValue={languageOptions[0].value}
@@ -65,8 +65,8 @@ const Socialwhitelang = () => {
                     className="custom-select"
                 />
             </div>
-            <div className='w-[1px] h-[32px] bg-black01'></div>
-            <div className='flex items-center gap-x-4'>
+            <div className='w-[1px] h-[32px] bg-black100 hidden lg:block'></div>
+            <div className='lg:flex items-center gap-x-4 hidden'>
                 <Link to="https://www.facebook.com">
                     <FaFacebookF color='#303030' />
                 </Link>

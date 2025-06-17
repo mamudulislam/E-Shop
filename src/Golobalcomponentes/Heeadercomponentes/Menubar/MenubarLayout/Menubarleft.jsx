@@ -9,7 +9,7 @@ const Menubarleft = () => {
         <>
             <div className='flex items-center gap-x-20'>
                 <Allctagorimenu isMenu={true} className="font-Montserrat font-bold text-base text-white cursor-pointer flex items-center gap-x-2" />
-                <Link to="/Products" className='font-Montserrat font-bold text-base text-white'> {t('Products')}</Link>
+                <Link to="/Product" className='font-Montserrat font-bold text-base text-white'> {t('Products')}</Link>
                 <Link to="/Blog" className='font-Montserrat font-bold text-base text-white'> {t('Blog')}</Link>
                 <Link to="/Contact" className='font-Montserrat font-bold text-base text-white'>{t('Contact')}</Link>
             </div >
