@@ -29,7 +29,7 @@ function PrevArrow(props) {
     );
 }
 const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
@@ -46,7 +46,6 @@ const settings = {
     ]
 };
 
-// Main component
 const SprinRight = () => {
     return (
         <div className='slider-container relative mt-10 mb-10'>

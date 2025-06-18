@@ -20,13 +20,12 @@ const Newproductes = () => {
         <div>
             <Container>
                 <div className='mt-[80px] mb-[80px]'>
-                    {/* Header */}
                     <div className='flex items-center justify-between'>
-                        <h3 className='font-Poppins text-[36px] font-semibold text-black01'>
+                        <h3 className='font-Poppins text-[24px] md:text-[36px] font-semibold text-black01'>
                             {t("New Products")}
                         </h3>
                         <div className='flex items-center gap-x-2 justify-end'>
-                            <span className='font-Montserrat font-normal text-base'>
+                            <span className='font-Montserrat font-normal text-sm md:text-base'>
                                 {t("Sort by:")}
                             </span>
                             <div className='w-[150px]'>

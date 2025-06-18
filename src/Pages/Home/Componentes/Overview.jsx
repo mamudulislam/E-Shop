@@ -6,7 +6,7 @@ const Overview = () => {
     return (
         <>
             <Container>
-                <div className='grid grid-cols-[auto_auto] gap-x-[24px]'>
+                <div className='grid grid-cols-1 lg:grid-cols-[auto_auto] gap-y-5 lg:gap-x-5'>
                     <div>
                         <img src={overview1} alt="overview1....." className='h-full w-full object-cover' />
                     </div>

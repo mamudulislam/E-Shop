@@ -14,12 +14,12 @@ const Footer = () => {
     return (
         <Container>
             <footer className='mt-20'>
-                <div className='grid grid-cols-[1fr_2fr] gap-x-2 h-full'>
+                <div className='grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-x-2 h-full'>
                     <div className='flex flex-col justify-between h-full'>
                         <Link to="/">
                             <img src={logo} alt="logo is loading now....." />
                         </Link>
-                        <div>
+                        <div className='mt-5 lg:mt-0'>
                             <ul>
                                 <li className='flex items-center gap-x-2 font-Montserrat font-normal text-black01 mb-3'>
                                     <FaPhoneAlt color='#828282' />
@@ -36,7 +36,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className='grid grid-cols-4 gap-x-4'>
+                    <div className='grid grid-cols-2 lg:grid-cols-4 gap-x-4'>
                         {
                             footerlinklist.map((item, index) => {
                                 const linkTitle = item.linkTitle
@@ -98,14 +98,14 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='mt-20 border-t border-t-black100 flex justify-between items-center py-2'>
-                    <span className='font-Montserrat font-normal text-sm text-black200'>Copyright © 2025 E-Shop. All Rights Reserved.</span>
+                <div className='mt-20 border-t border-t-black100 flex flex-col md:flex-row justify-between items-center py-2'>
+                    <span className='font-montserrat font-normal text-xs md:text-sm text-black200'>Copyright © 2025 E-Shop. All Rights Reserved.</span>
                     <div className='flex items-center gap-x-2'>
-                        <Link to="" className='font-Montserrat font-normal text-sm text-black200'>Privacy Policy</Link>
-                        <span className='font-Montserrat font-normal text-sm text-black200'>|</span>
-                        <Link to="" className='font-Montserrat font-normal text-sm text-black200'>Terms & Condition</Link>
-                        <span className='font-Montserrat font-normal text-sm text-black200'>|</span>
-                        <Link to="" className='font-Montserrat font-normal text-sm text-black200'>Sitemap</Link>
+                        <Link to="" className='font-montserrat font-normal text-black200 text-xs lg:text-sm'>Privacy Policy</Link>
+                        <span className='text-black200'>|</span>
+                        <Link to="" className='font-montserrat font-normal text-black200 text-xs lg:text-sm'>Terms & Condition</Link>
+                        <span className=' text-black200'>|</span>
+                        <Link to="" className='font-montserrat font-normal text-black200 text-xs lg:text-sm'>Sitemap</Link>
                     </div>
                 </div>
             </footer>
