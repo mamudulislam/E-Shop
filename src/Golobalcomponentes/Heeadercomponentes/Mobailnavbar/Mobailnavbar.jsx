@@ -4,13 +4,26 @@ import logo from "../../../assets/Logo/logo.png"
 import { useTranslation } from 'react-i18next';
 import { CiSearch } from 'react-icons/ci';
 import { RxHamburgerMenu } from 'react-icons/rx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Drawer from '../../Drawercomponentes/Drawer';
 import Socialwhitelang from '../Topbar/Socialwhitelang';
 import NavListItems from './NavListItems';
 const Mobailnavbar = () => {
     const { t } = useTranslation();
     const [open, setOpen] = useState(true)
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 991) {
+                setOpen(false);
+            }
+        };
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+
     return (
         <>
             <div className='border-b-1 border-b-black100'>
