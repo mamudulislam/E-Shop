@@ -1,8 +1,16 @@
 import React from 'react'
+import MapLayout from './Componentes/MapLayout'
+import Container from '../../Golobalcomponentes/Container'
+import ContactBody from './Componentes/ContactBody'
 
 const Contact = () => {
     return (
-        <div>Contact</div>
+        <>
+            <Container>
+                <MapLayout />
+                <ContactBody />
+            </Container>
+        </>
     )
 }
 
