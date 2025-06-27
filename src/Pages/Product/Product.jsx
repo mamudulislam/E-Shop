@@ -1,5 +1,5 @@
 import Container from '../../Golobalcomponentes/Container'
-import Leftproductcomponent from './Components/leftproductcomponent'
+import Leftsidecomponent from './Components/Leftsidecomponent'
 import Rightproductcomponent from './Components/Rightproductcomponent'
 
 const Product = () => {
@@ -7,7 +7,7 @@ const Product = () => {
         <>
             <Container>
                 <div className='grid grid-cols-[1fr_3.8fr] gap-x-4 mt-[64px]'>
-                    <Leftproductcomponent />
+                    <Leftsidecomponent />
                     <Rightproductcomponent />
                 </div>
             </Container>

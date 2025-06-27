@@ -3,7 +3,7 @@ import Categories from './FilterCategories/Categories'
 import Brand from './FilterCategories/Brand'
 import Price from './FilterCategories/Price'
 
-const Leftproductcomponent = () => {
+const Leftsidecomponent = () => {
     return (
         <>
             <div className='bg-white02 p-[48px] rounded-lg'>
@@ -16,4 +16,4 @@ const Leftproductcomponent = () => {
     )
 }
 
-export default Leftproductcomponent
+export default Leftsidecomponent
