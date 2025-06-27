@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+
+@theme {
+    --font-Poppins: "Poppins", sans-serif;
+    --font-Montserrat: "Montserrat", sans-serif;
+    --color-orange: #ff624c;
+    --color-black: #000;
+    --color-white: #FFFFFF;
+    --color-yellow: #FED550;
+    --color-purpel: #1A237B;
+    --color-blue: #00579F;
+    --color-red: #BD0034;
+    --color-gray: #c4c4c4;
+    --color-black01: #303030;
+    --color-white01: #D9D9D9;
+    --color-purpel01: #283BB2;
+    --color-blue01: #469BDB;
+    --color-white02: #F4F4F4;
+    --color-black100: #30303038;
+    --color-black200: #828282;
+    --breakpoint-xs: 320px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+    --breakpoint-3xl: 1700px;
+}
+
+.custom-select .ant-select-selector {
+    border: none !important;
+}
+
+
+.custom-collapse {
+    background-color: white !important;
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 10px !important;
+    margin-bottom: 20px !important;
+}
+
+.custom-collapse:last-child {
+    margin-bottom: 0px !important;
+}
+
+.custom-collapse .ant-collapse-content {
+    border-top: none !important;
+}
+
+.custom-collapse .ant-collapse-header {
+    display: flex !important;
+    align-items: center !important;
+    column-gap: 32px !important;
+}
+
+.custom-collapse .ant-collapse-expand-icon {
+    width: 32px !important;
+    height: 32px !important;
+    padding-inline-end: 0 !important;
+    background-color: #ff624c !important;
+    border-radius: 50% !important;
+    justify-content: center !important;
+    border: 1px solid transparent !important;
+}
+
+.custom-collapse .ant-collapse-header[aria-expanded="true"] .ant-collapse-expand-icon {
+    background-color: white !important;
+    border-color: #ff624c !important;
+}
+
+.custom-collapse .ant-collapse-header .ant-collapse-expand-icon svg {
+    color: white !important;
+}
+
+.custom-collapse .ant-collapse-header[aria-expanded="true"] .ant-collapse-expand-icon svg {
+    color: #ff624c !important;
+}
+
+.custom-collapse .ant-collapse-header-text {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    color: #303030 !important;
+}
+
+.custom-collapse .ant-collapse-content-box {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    line-height: 30px !important;
+    color: #303030 !important;
+}
+
+.ant_drawer .ant-drawer-close {
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+@media(max-width:576px) {
+    .custom-collapse .ant-collapse-header-text {
+        font-size: 15px !important;
+    }
+
+    .custom-collapse .ant-collapse-content-box {
+        font-size: 14px !important;
+        line-height: 24px !important;
+    }
+}
