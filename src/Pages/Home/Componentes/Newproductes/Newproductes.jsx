@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import ProductCard from '../../../../Golobalcomponentes/ProductCard/ProductCard';
 import Allctagorimenu from '../../../../Golobalcomponentes/Heeadercomponentes/Menubar/Allcatagories/Allctagorimenu';
 import { newproductdata } from './Newproduct';
+import { Featureddata } from '../FeaturedProducts/Featureddata';
 
 const Newproductes = () => {
     const { t } = useTranslation();
@@ -36,19 +37,19 @@ const Newproductes = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 mt-8">
-                        {newproductdata.slice(0, visibleCount).map((product) => (
-                            <div key={product.id} className="px-2">
-                                <ProductCard
-                                    imges={product.imges}
-                                    pCatagori={product.pCatagori}
-                                    pName={product.pName}
-                                    rate={product.rate}
-                                    totalrating={product.totalrating}
-                                    price={product.price}
-                                    pdiscout={product.discount}
-                                />
-                            </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 2xl:gap-x-5 gap-y-10 mt-[30px]">
+                        {Featureddata?.slice(0, visibleCount)?.map((product) => (
+                            <ProductCard
+                                key={product.id}
+                                id={product.id}
+                                imges={product?.imges}
+                                rate={product.rate}
+                                pCategory={product.pCategory}
+                                pName={product.pName}
+                                totalrating={product.totalrating}
+                                price={product.price}
+                                discout={product.discout}
+                            />
                         ))}
                     </div>
                     {visibleCount < newproductdata.length ? (

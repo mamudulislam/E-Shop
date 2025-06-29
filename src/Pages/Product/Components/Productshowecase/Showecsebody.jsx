@@ -1,0 +1,31 @@
+import React from 'react'
+import ProductCard from '../../../../Golobalcomponentes/ProductCard/ProductCard'
+import { Featureddata } from '../../../Home/Componentes/FeaturedProducts/Featureddata'
+
+const Showecsebody = () => {
+    return (
+        <>
+            <div className='mt-[48px]'>
+                {
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 2xl:gap-x-5 gap-y-10 mt-[30px]">
+                        {Featureddata?.slice(0, 16)?.map((product) => (
+                            <ProductCard
+                                key={product.id}
+                                id={product.id}
+                                imges={product?.imges}
+                                rate={product.rate}
+                                pCategory={product.pCategory}
+                                pName={product.pName}
+                                totalrating={product.totalrating}
+                                price={product.price}
+                                discout={product.discout}
+                            />
+                        ))}
+                    </div>
+                }
+            </div >
+        </>
+    )
+}
+
+export default Showecsebody

@@ -1,8 +1,15 @@
 import React from 'react'
+import Showecse from './Productshowecase/Showecse'
+import Showecsebody from './Productshowecase/Showecsebody'
 
 const Rightproductcomponent = () => {
     return (
-        <div>Rightproductcomponent</div>
+        <>
+            <div>
+                <Showecse />
+                <Showecsebody />
+            </div>
+        </>
     )
 }
 
