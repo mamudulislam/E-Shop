@@ -15,6 +15,8 @@ const ProductCard = ({
     price,
     discout,
 }) => {
+    const removeSpace = pName.replace(/\s/g, "")
+    console.log(removeSpace)
     return (
         <>
             <div className="relative group border border-transparent hover:border-black100 p-6 rounded-[10px] w-[285px]">
@@ -56,7 +58,7 @@ const ProductCard = ({
                             }
                         >
                             <Link
-                                to="/product"
+                                to={`/Product/${pName}`}
                                 className="font-poppins text-xl font-semibold text-black01 truncate"
                             >
                                 {pName}
@@ -64,7 +66,7 @@ const ProductCard = ({
                         </Tooltip>
                     ) : (
                         <Link
-                            to="/product"
+                            to={`/Product/${pName}`}
                             className="font-poppins text-xl font-semibold text-black01 truncate group-hover:text-orange transition-all ease-linear duration-100"
                         >
                             {pName}
@@ -87,7 +89,7 @@ const ProductCard = ({
                         )}
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     );
 };
