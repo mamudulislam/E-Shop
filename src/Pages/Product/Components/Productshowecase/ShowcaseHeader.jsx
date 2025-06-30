@@ -9,7 +9,7 @@ import {
 } from "../../../../settings/Redux/feature/viewSlice";
 import CustomDropdown from "../../../../Golobalcomponentes/CustomDropdown/CustomDropdown";
 
-const ShowcaseHeader = () => {
+const ShowcaseHeader = ({ currentPage, pageSize }) => {
     const dispatch = useDispatch();
     const viewMode = useSelector((state) => state.view.mode);
     const { t } = useTranslation();
@@ -19,6 +19,10 @@ const ShowcaseHeader = () => {
         { key: "2", label: t("Price High to Low") },
     ];
 
+    // Calculate showing range
+    const startItem = (currentPage - 1) * pageSize + 1;
+    const endItem = Math.min(currentPage * pageSize, 160); // Assuming total is 160
+
     return (
         <div>
             <h1 className="font-montserrat text-[36px] font-bold text-black">
@@ -26,14 +30,14 @@ const ShowcaseHeader = () => {
             </h1>
             <div className="flex items-center justify-between mt-6">
                 <p className="font-montserrat text-base text-black01">
-                    {t("Showing 1 - 16 of 160 results.")}
+                    {t(`Showing ${startItem} - ${endItem} of 160 results.`)}
                 </p>
                 <div className="flex items-center gap-x-4">
                     <div className="flex items-center gap-x-2">
                         <span className="font-montserrat font-normal text-sm lg:text-base">
                             {t("Sort By")}:
                         </span>
-                        <div className="w-[158px]">
+                        <div className="w-[190px]">
                             <CustomDropdown
                                 className="font-montserrat font-bold text-sm lg:text-base text-orange cursor-pointer w-full flex justify-between items-center"
                                 icon={true}
