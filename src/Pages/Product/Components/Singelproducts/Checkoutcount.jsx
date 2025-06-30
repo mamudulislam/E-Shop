@@ -10,7 +10,7 @@ import { LiaOpencart } from 'react-icons/lia';
 const Checkoutcount = () => {
     const dispatch = useDispatch();
     const countValue = useSelector((state) => state.count.count);
-    const disabelwhenlessthenone = countValue === 1
+    const disabelwhenlessthenone = countValue == 1;
 
     return (
         <div>
