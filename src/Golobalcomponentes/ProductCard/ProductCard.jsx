@@ -7,6 +7,7 @@ import { IoShareSocialOutline } from 'react-icons/io5';
 import { FaOpencart, FaRegHeart } from 'react-icons/fa';
 
 const ProductCard = ({
+    id,
     imges,
     pCategory,
     pName,
@@ -15,6 +16,7 @@ const ProductCard = ({
     price,
     discout,
 }) => {
+    console.log(id)
     const removeSpace = pName.replace(/\s/g, "")
     console.log(removeSpace)
     return (
@@ -58,7 +60,7 @@ const ProductCard = ({
                             }
                         >
                             <Link
-                                to={`/Product/${pName}`}
+                                to={`/Product/${id}`}
                                 className="font-poppins text-xl font-semibold text-black01 truncate"
                             >
                                 {pName}
@@ -66,7 +68,7 @@ const ProductCard = ({
                         </Tooltip>
                     ) : (
                         <Link
-                            to={`/Product/${pName}`}
+                            to={`/Product/${id}`}
                             className="font-poppins text-xl font-semibold text-black01 truncate group-hover:text-orange transition-all ease-linear duration-100"
                         >
                             {pName}

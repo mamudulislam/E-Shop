@@ -94,6 +94,7 @@ const FeaturedProducts = () => {
                                     <div className='border border-transparent transition duration-300 rounded-md p-2'>
                                         <ProductCard
                                             key={product.id}
+                                            id={product.id}
                                             imges={product?.imges}
                                             rate={product.rate}
                                             pCategory={product.pCategory}
