@@ -33,7 +33,7 @@ const ShowcaseHeader = () => {
                         <span className="font-montserrat font-normal text-sm lg:text-base">
                             {t("Sort By")}:
                         </span>
-                        <div className="w-[150px]">
+                        <div className="w-[158px]">
                             <CustomDropdown
                                 className="font-montserrat font-bold text-sm lg:text-base text-orange cursor-pointer w-full flex justify-between items-center"
                                 icon={true}
