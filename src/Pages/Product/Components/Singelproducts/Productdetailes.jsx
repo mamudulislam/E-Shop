@@ -1,6 +1,7 @@
 import React from 'react'
 import { getstar } from '../../../../Utils/genaretrating'
 import { gotDiscounty } from '../../../../Utils/gotDiscounty'
+import ReactImageMagnify from 'react-image-magnify'
 const Productdetailes = ({
     imges,
     totalrating,
@@ -18,9 +19,31 @@ const Productdetailes = ({
         <>
             <div>
                 <div className='grid grid-cols-[2fr_1.5fr] gap-x-8'>
-                    <div className='border border-black200 rounded-lg overflow-hidden h-[500px]'>
-                        <img src={imges} alt="" className='w-full h-full object-center'
+                    <div className='relative w-full h-[500px] overflow-visible rounded-xl border border-gray flex items-center justify-center'>
+                        {/* <img src={imges} alt="" className='w-full h-full object-center'
+                        /> */}
+                        <ReactImageMagnify
+                            {...{
+                                smallImage: {
+                                    alt: 'Wristwatch by Ted Baker London',
+                                    isFluidWidth: false,
+                                    src: imges,
+                                    width: 450,
+                                    height: 450
+                                },
+                                largeImage: {
+                                    src: imges,
+                                    width: 1200,
+                                    height: 1800
+                                },
+                                enlargedImageContainerStyle: {
+                                    zIndex: 1000,
+                                },
+                                isHintEnabled: true,
+                                enlargedImagePosition: "beside",
+                            }}
                         />
+
                     </div>
                     <div>
                         <div className="flex items-center gap-x-2 mt-2">
