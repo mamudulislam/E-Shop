@@ -109,3 +109,22 @@
         line-height: 24px !important;
     }
 }
+
+.custom-pagination .ant-pagination-item-active {
+    background-color: #ff624c;
+    border-color: #ff624c;
+}
+
+.custom-pagination .ant-pagination-item:hover {
+    border-color: #ff624c !important;
+}
+
+.custom-pagination .ant-pagination-item:hover a {
+    color: white !important;
+    background-color: #ff624c;
+    border-color: #ff624c;
+}
+
+.custom-pagination .ant-pagination-item-active a {
+    color: white;
+}
