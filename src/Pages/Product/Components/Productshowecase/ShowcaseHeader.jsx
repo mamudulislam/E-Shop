@@ -9,7 +9,7 @@ import {
 } from "../../../../settings/Redux/feature/viewSlice";
 import CustomDropdown from "../../../../Golobalcomponentes/CustomDropdown/CustomDropdown";
 
-const ShowcaseHeader = () => {
+const ShowcaseHeader = ({ startIndex, endIndex, totalItems }) => {
     const dispatch = useDispatch();
     const viewMode = useSelector((state) => state.view.mode);
     const { t } = useTranslation();
@@ -26,7 +26,7 @@ const ShowcaseHeader = () => {
             </h1>
             <div className="flex items-center justify-between mt-6">
                 <p className="font-montserrat text-base text-black01">
-                    {t("Showing 1 - 16 of 160 results.")}
+                    {t(`Showing ${startIndex} - ${endIndex} of ${totalItems} results.`)}
                 </p>
                 <div className="flex items-center gap-x-4">
                     <div className="flex items-center gap-x-2">
