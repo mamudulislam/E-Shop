@@ -27,7 +27,7 @@ const Productcardlist = ({
                 </div>
                 <div>
                     <h6 className="font-montserrat text-sm font-normal text-black01 uppercase tracking-normal lg:tracking-[5px]">
-                        {pCategory}
+                        {pCategory} = n || { }
                     </h6>
                     {pName?.length > 20 ? (
                         <Tooltip

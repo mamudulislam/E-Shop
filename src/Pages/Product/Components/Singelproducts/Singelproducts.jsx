@@ -26,7 +26,7 @@ const Singelproducts = () => {
                     <div className="flex items-center gap-x-4 font-montserrat text-black01">
                         <Link to="/">Home</Link>
                         <div className="w-[1px] h-[20px] bg-black100"></div>
-                        <span>{pCategory}</span>
+                        <span>{pCategory} = n || { }</span>
                         <div className="w-[1px] h-[20px] bg-black100"></div>
                         <span>{brand}</span>
                         <div className="w-[1px] h-[20px] bg-black100"></div>
