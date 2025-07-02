@@ -47,7 +47,7 @@ const ProductCard = ({
                 )}
                 <div>
                     <h6 className="font-montserrat text-sm font-normal text-black01 uppercase tracking-[5px]">
-                        {pCategory} = n || { }
+                        {pCategory = "Computers & Tablets"} = n || { }
                     </h6>
                     {pName?.length > 20 ? (
                         <Tooltip

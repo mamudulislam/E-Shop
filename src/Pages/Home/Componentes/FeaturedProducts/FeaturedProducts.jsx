@@ -97,7 +97,7 @@ const FeaturedProducts = () => {
                                             id={product.id}
                                             imges={product?.imges}
                                             rate={product.rate}
-                                            pCategory={product.pCategory}
+                                            pCategory={product?.pCategory}
                                             pName={product.pName}
                                             totalrating={product.totalrating}
                                             price={product.price}
