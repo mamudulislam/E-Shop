@@ -12,7 +12,7 @@ const Relatedproducts = ({ Relatedproduct }) => {
             <div>
                 <div className='flex items-center justify-between'>
                     <h3 className='font-Poppins text-[36px] font-semibold text-black01'>
-                        {t("Featured Products")}
+                        {t("Related Products")}
                     </h3>
                     <Link to="/Product" className='flex items-center gap-x-2 font-Montserrat font-bold text-base text-orange group'>
                         {t("View All")}{" "}
