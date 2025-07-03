@@ -4,6 +4,8 @@ import Container from '../../../../Golobalcomponentes/Container';
 import { Featureddata } from '../../../Home/Componentes/FeaturedProducts/Featureddata';
 import Productdetailes from './Productdetailes';
 import Checkoutcount from './Checkoutcount';
+import ProductDescription from './ProductDescription';
+import Relatedproducts from './Relatedproducts';
 
 const Singelproducts = () => {
     const { pathname } = useLocation();
@@ -13,11 +15,22 @@ const Singelproducts = () => {
         pCategory,
         pName,
         imges,
-        totalrating, rate, price, discout, brand, size,
+        totalrating,
+        rate,
+        price,
+        discout,
+        brand,
+        size,
         variant,
         weight,
-        delivery
+        delivery,
+        description
     } = Singelproducts;
+    const Relatedproduct = Featureddata.filter((product) =>
+        product.pCategory === Singelproducts.pCategory &&
+        product.id !== Singelproducts.id
+    );
+    console.log(Relatedproducts);
     console.log(Singelproducts);
     return (
         <>
@@ -49,6 +62,12 @@ const Singelproducts = () => {
                     </div>
                     <div className='mt-[48px]'>
                         <Checkoutcount />
+                    </div>
+                    <div className='mt-[48px]'>
+                        <ProductDescription description={description} />
+                    </div>
+                    <div className='mt-[48px]'>
+                        <Relatedproducts Relatedproduct={Relatedproduct} />
                     </div>
                 </div>
             </Container >
