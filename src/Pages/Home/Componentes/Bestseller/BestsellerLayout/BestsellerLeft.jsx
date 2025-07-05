@@ -22,18 +22,18 @@ const BestsellerLeft = () => {
                 </Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {Featureddata.map((product) => (
-                    <div key={product.id} className="transition duration-300 rounded-md">
-                        <ProductCard
-                            imges={product?.imges}
-                            pCatagori={product?.pCatagori}
-                            pName={product?.pName}
-                            rate={product?.rate}
-                            totalrating={product?.totalrating}
-                            price={product?.price}
-                            pdiscout={product?.discout}
-                        />
-                    </div>
+                {Featureddata?.slice(0, 9)?.map((product) => (
+                    <ProductCard
+                        key={product.id}
+                        id={product.id}
+                        imges={product?.imges}
+                        rate={product.rate}
+                        pCategory={product.pCategory}
+                        pName={product.pName}
+                        totalrating={product.totalrating}
+                        price={product.price}
+                        discout={product.discout}
+                    />
                 ))}
             </div>
         </div>

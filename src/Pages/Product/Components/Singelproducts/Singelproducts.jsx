@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Container from '../../../../Golobalcomponentes/Container';
 import { Featureddata } from '../../../Home/Componentes/FeaturedProducts/Featureddata';
@@ -6,6 +6,8 @@ import Productdetailes from './Productdetailes';
 import Checkoutcount from './Checkoutcount';
 import ProductDescription from './ProductDescription';
 import Relatedproducts from './Relatedproducts';
+import { useDispatch } from 'react-redux';
+import { setCountreset } from '../../../../settings/Redux/feature/Counterslice';
 
 const Singelproducts = () => {
     const { pathname } = useLocation();
@@ -26,12 +28,16 @@ const Singelproducts = () => {
         delivery,
         description
     } = Singelproducts;
+    const dispatch = useDispatch()
     const Relatedproduct = Featureddata.filter((product) =>
         product.pCategory === Singelproducts.pCategory &&
         product.id !== Singelproducts.id
     );
     console.log(Relatedproducts);
     console.log(Singelproducts);
+    useEffect(() => {
+        dispatch(setCountreset())
+    }, [])
     return (
         <>
             <Container>

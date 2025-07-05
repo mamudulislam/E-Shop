@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setCountDec, setCountInc } from '../../../../settings/Redux/feature/Counterslice';
 import Commonbuttun from '../../../../Golobalcomponentes/Commonbuttun';
 import { LiaOpencart } from 'react-icons/lia';
+import { Link } from 'react-router-dom';
 
 const Checkoutcount = () => {
     const dispatch = useDispatch();
@@ -58,9 +59,11 @@ const Checkoutcount = () => {
                                 Buy Now
                             </span>
                         </Commonbuttun>
-                        <div className='w-[62px] h-[62px] rounded-md flex items-center justify-center border border-orange'>
-                            <LiaOpencart size={30} color="#ff624c" />
-                        </div>
+                        <Link to="/Cart">
+                            <div className='w-[62px] h-[62px] rounded-md flex items-center justify-center border border-orange'>
+                                <LiaOpencart size={30} color="#ff624c" />
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>

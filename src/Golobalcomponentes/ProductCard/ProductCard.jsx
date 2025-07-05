@@ -27,9 +27,11 @@ const ProductCard = ({
                 </div>
                 <div className="absolute top-[40%] left-2/4 -translate-x-2/4 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all ease-linear duration-100">
                     <div className="flex items-center gap-x-3">
-                        <div className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white border border-orange flex items-center justify-center text-orange hover:bg-orange hover:text-white">
-                            <FaOpencart />
-                        </div>
+                        <Link to="/Cart">
+                            <div className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white border border-orange flex items-center justify-center text-orange hover:bg-orange hover:text-white">
+                                <FaOpencart />
+                            </div>
+                        </Link>
                         <div className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white border border-orange flex items-center justify-center text-orange hover:bg-orange hover:text-white">
                             <FaRegHeart />
                         </div>

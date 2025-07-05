@@ -1,12 +1,20 @@
-import React from 'react'
-import ProductCard from '../../../../Golobalcomponentes/ProductCard/ProductCard'
+import React, { useEffect } from 'react';
+import ProductCard from '../../../../Golobalcomponentes/ProductCard/ProductCard';
 import { CgArrowLongRight } from 'react-icons/cg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Subscribe from '../../../Home/Componentes/Subscribe/Subscribe';
-
+import { useDispatch } from 'react-redux';
+import { setCountrelated } from '../../../../settings/Redux/feature/Counterslice';
 const Relatedproducts = ({ Relatedproduct }) => {
+    const { pathname } = useLocation();
+    const id = pathname.split("/").slice(1)[1];
     const { t } = useTranslation();
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(setCountrelated());
+    }, [id]);
+
     return (
         <>
             <div>
@@ -40,12 +48,11 @@ const Relatedproducts = ({ Relatedproduct }) => {
                     ) : (
                         <p className="font-Poppins text-center text-gray-500">No related products found.</p>
                     )}
-
                 </div>
                 <Subscribe />
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Relatedproducts
+export default Relatedproducts;

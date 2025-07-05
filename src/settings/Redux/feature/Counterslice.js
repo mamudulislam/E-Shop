@@ -13,8 +13,14 @@ const counterSlice = createSlice({
     setCountDec: (state) => {
       state.count -= 1;
     },
+    setCountreset: (state) => {
+      state.count = 1;
+    },
+    setCountrelated: (state) => {
+      state.count = 1;
+    },
   }
 });
 
-export const { setCountInc, setCountDec } = counterSlice.actions;
+export const { setCountInc, setCountDec, setCountreset,setCountrelated } = counterSlice.actions;
 export default counterSlice.reducer;

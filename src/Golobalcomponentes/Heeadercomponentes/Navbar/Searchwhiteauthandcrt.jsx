@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { CiSearch } from 'react-icons/ci';
 import { FiUser } from 'react-icons/fi';
 import { LiaOpencart } from 'react-icons/lia';
+import { Link } from 'react-router-dom';
 
 const Searchwhiteauthandcrt = () => {
     const { t } = useTranslation();
@@ -13,16 +14,19 @@ const Searchwhiteauthandcrt = () => {
                 <input placeholder={t('search_product')} type="text" className='outline-none' />
                 <CiSearch size={20} />
             </div>
-            <div className='flex items-center gap-x-5'>
-                <div className='relative'>
-                    <LiaOpencart size={30} />
-                    <span className='absolute top-0 right-0 w-1.5 h-1.5 bg-orange rounded-full'></span>
+            <Link to="/Cart">
+                <div className='flex items-center gap-x-5'>
+                    <div className='relative'>
+                        <LiaOpencart size={30} />
+                        {/* <span className='absolute top-0 right-0 w-1.5 h-1.5 bg-orange rounded-full'></span> */}
+                    </div>
+                    <div>
+                        <h6 className='font-Montserrat text-base text-black01'>{t('Cart')}</h6>
+                        <span className='font-Montserrat text-base text-black01 font-bold'>$ 150,00</span>
+                    </div>
                 </div>
-                <div>
-                    <h6 className='font-Montserrat text-base text-black01'>{t('Cart')}</h6>
-                    <span className='font-Montserrat text-base text-black01 font-bold'>$ 150,00</span>
-                </div>
-            </div>
+            </Link>
+
             <div className='w-[1px] h-[32px] bg-black01'></div>
             <div className='flex items-center gap-x-5'>
                 <div>
@@ -33,7 +37,7 @@ const Searchwhiteauthandcrt = () => {
                     <span className='font-Montserrat text-base text-black01 font-bold'>{t('Account')}</span>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
