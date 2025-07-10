@@ -1,60 +1,91 @@
-import { BsTrash3 } from 'react-icons/bs'
-import { FiPlus } from 'react-icons/fi'
-import { LuMinus } from 'react-icons/lu'
+import React from 'react';
+import { BsTrash3 } from 'react-icons/bs';
+import { FiPlus, FiMinus } from 'react-icons/fi';
+import { useDispatch } from 'react-redux';
+import { updateQty, removecart } from '../../../settings/Redux/feature/Cartslice';
 
-const Productscarts = ({ pCategory, pName, variant, price, total }) => {
+const Productscarts = ({ id, pCategory, pName, variant, price, imges, qty }) => {
+    const dispatch = useDispatch();
+
+    const handleIncrease = () => {
+        dispatch(updateQty({ id, qty: qty + 1 }));
+    };
+
+    const handleDecrease = () => {
+        if (qty > 1) {
+            dispatch(updateQty({ id, qty: qty - 1 }));
+        }
+    };
+
+    const handleRemove = () => {
+        dispatch(removecart(id));
+    };
+
     return (
-        <>
-            <div>
-                <div className='px-[56px] py-[32px] hover:border-black100 border border-transparent relative group'>
-
-                    <div className='grid grid-cols-[607px_171px_171px_171px] gap-x-12 items-center'>
-                        <div className='flex items-center gap-x-5'>
-                            <div className='w-[237px] h-[214px] bg-white01 rounded-md'></div>
-                            <div>
-                                <h6 className="font-montserrat text-sm font-normal text-black01 uppercase tracking-[5px]">
-                                    {pCategory}
-                                </h6>
-                                <h4 className="font-poppins text-sm font-semibold text-black01 mb-[46px] mt-[16px]">{pName}</h4>
-                                <span className='font-Montserrat text-base'>
-                                    <b>Variant:</b> black
-                                </span>
-                            </div>
-                        </div>
-                        <div>
-                            <h6 className='font-Poppins font-semibold text-xl'>${price}</h6>
-                        </div>
-                        <div>
-                            <div className='flex items-center justify-between'>
-                                <div className='flex items-center gap-x-8'>
-                                    <button
-                                        className=' cursor-pointer'
-                                    >
-                                        <LuMinus />
-                                    </button>
-                                    <div className='font-Poppins text-black01 font-semibold text-[16px] bg-white02 rounded-full flex items-center justify-center w-[30px] h-[30px]'>
-                                        1
-                                    </div>
-                                    <button
-                                        className='w-[56px] h-[56px] cursor-pointer'
-                                    >
-                                        <FiPlus />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='pl-2'>
-                            <h6 className='font-Poppins text-xl text-black01 font-semibold'>${total}</h6>
-                        </div>
+        <div className='px-[56px] py-[32px] hover:border-black100 border border-transparent relative group mb-4 bg-white rounded-lg shadow-sm'>
+            <div className='grid grid-cols-[2fr_1fr_1fr_1fr] gap-x-12 items-center'>
+                {/* Product Info */}
+                <div className='flex items-center gap-x-5'>
+                    <div className='w-[120px] h-[120px] bg-white01 rounded-md overflow-hidden'>
+                        {imges && imges[0] && (
+                            <img src={imges[0]} alt={pName} className="w-full h-full object-cover" />
+                        )}
                     </div>
-                    <div role='buttun' className=' absolute top-[50%] translate-y-[-50%] right-12 w-[64px] h-[64px] rounded-full bg-orange flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all ease-in duration-150 cursor-pointer'>
-                        <BsTrash3 color="white" size={20} />
+                    <div>
+                        <h6 className="font-montserrat text-sm font-normal text-black01 uppercase tracking-[2px]">
+                            {pCategory}
+                        </h6>
+                        <h4 className="font-poppins text-lg font-semibold text-black01 my-2">{pName}</h4>
+                        <span className='font-Montserrat text-base text-gray-600'>
+                            <b>Variant:</b> {variant || 'Default'}
+                        </span>
                     </div>
                 </div>
-            </div >
-        </>
 
-    )
-}
+                {/* Price */}
+                <div>
+                    <h6 className='font-Poppins font-semibold text-xl'>${price.toFixed(2)}</h6>
+                </div>
 
-export default Productscarts
+                {/* Quantity Controls */}
+                <div>
+                    <div className='flex items-center justify-start'>
+                        <div className='flex items-center gap-x-4'>
+                            <button
+                                onClick={handleDecrease}
+                                className='w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100'
+                            >
+                                <FiMinus size={14} />
+                            </button>
+                            <div className='font-Poppins text-black01 font-semibold text-lg'>
+                                {qty}
+                            </div>
+                            <button
+                                onClick={handleIncrease}
+                                className='w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100'
+                            >
+                                <FiPlus size={14} />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Total */}
+                <div>
+                    <h6 className='font-Poppins text-xl text-black01 font-semibold'>${(price * qty).toFixed(2)}</h6>
+                </div>
+            </div>
+
+            {/* Remove Button */}
+            <button
+                onClick={handleRemove}
+                className='absolute top-1/2 right-12 transform -translate-y-1/2 w-12 h-12 rounded-full bg-orange flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-orange-dark'
+                title="Remove item"
+            >
+                <BsTrash3 color="white" size={16} />
+            </button>
+        </div>
+    );
+};
+
+export default Productscarts;

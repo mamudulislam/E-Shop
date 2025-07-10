@@ -13,31 +13,13 @@ const Singelproducts = () => {
     const { pathname } = useLocation();
     const id = pathname.split("/").slice(1)[1];
     const Singelproducts = Featureddata.find((p) => p.id == id);
-    const {
-        pCategory,
-        pName,
-        imges,
-        totalrating,
-        rate,
-        price,
-        discout,
-        brand,
-        size,
-        variant,
-        weight,
-        delivery,
-        description
-    } = Singelproducts;
+
     const dispatch = useDispatch()
-    const Relatedproduct = Featureddata.filter((product) =>
-        product.pCategory === Singelproducts.pCategory &&
-        product.id !== Singelproducts.id
-    );
-    console.log(Relatedproducts);
-    console.log(Singelproducts);
+
     useEffect(() => {
         dispatch(setCountreset())
     }, [])
+
     return (
         <>
             <Container>
@@ -45,38 +27,34 @@ const Singelproducts = () => {
                     <div className="flex items-center gap-x-4 font-montserrat text-black01">
                         <Link to="/">Home</Link>
                         <div className="w-[1px] h-[20px] bg-black100"></div>
-                        <span>{pCategory}</span>
+                        <span>{Singelproducts.pCategory}</span>
                         <div className="w-[1px] h-[20px] bg-black100"></div>
-                        <span>{brand}</span>
+                        <span>{Singelproducts.brand}</span>
                         <div className="w-[1px] h-[20px] bg-black100"></div>
-                        <span className="font-bold">{pName}</span>
+                        <span className="font-bold">{Singelproducts.pName}</span>
                     </div>
                     <div className='mt-[48px]'>
-                        <Productdetailes
-                            pName={pName}
-                            imges={imges}
-                            totalrating={totalrating}
-                            rate={rate}
-                            price={price}
-                            discout={discout}
-                            brand={brand}
-                            size={size}
-                            variant={variant}
-                            weight={weight}
-                            delivery={delivery}
+                        <Productdetailes {...Singelproducts} />
+                    </div>
+                    <div className='mt-[48px]'>
+                        <Checkoutcount product={{
+                            ...Singelproducts,
+                            imges: Singelproducts.imges
+                        }} />
+                    </div>
+                    <div className='mt-[48px]'>
+                        <ProductDescription description={Singelproducts.description} />
+                    </div>
+                    <div className='mt-[48px]'>
+                        <Relatedproducts
+                            Relatedproduct={Featureddata.filter((product) =>
+                                product.pCategory === Singelproducts.pCategory &&
+                                product.id !== Singelproducts.id
+                            )}
                         />
                     </div>
-                    <div className='mt-[48px]'>
-                        <Checkoutcount />
-                    </div>
-                    <div className='mt-[48px]'>
-                        <ProductDescription description={description} />
-                    </div>
-                    <div className='mt-[48px]'>
-                        <Relatedproducts Relatedproduct={Relatedproduct} />
-                    </div>
                 </div>
-            </Container >
+            </Container>
         </>
     )
 }
