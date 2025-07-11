@@ -27,8 +27,6 @@ const Singelproducts = () => {
         } else {
             dispatch(setCountreset());
         }
-
-        // Cleanup: reset count when leaving the page
         return () => {
             dispatch(setCountreset());
         };
@@ -41,7 +39,6 @@ const Singelproducts = () => {
     return (
         <Container>
             <div className='mt-20'>
-                {/* Breadcrumb */}
                 <div className="flex items-center gap-x-4 font-montserrat text-black01">
                     <Link to="/">Home</Link>
                     <div className="w-[1px] h-[20px] bg-black100"></div>
@@ -51,20 +48,15 @@ const Singelproducts = () => {
                     <div className="w-[1px] h-[20px] bg-black100"></div>
                     <span className="font-bold">{singleProduct.pName}</span>
                 </div>
-
-                {/* Sections */}
                 <div className='mt-[48px]'>
                     <Productdetailes {...singleProduct} />
                 </div>
-
                 <div className='mt-[48px]'>
                     <Checkoutcount product={singleProduct} />
                 </div>
-
                 <div className='mt-[48px]'>
                     <ProductDescription description={singleProduct.description} />
                 </div>
-
                 <div className='mt-[48px]'>
                     <Relatedproducts
                         Relatedproduct={Featureddata.filter(

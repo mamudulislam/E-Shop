@@ -11,7 +11,7 @@ const Cartbody = () => {
     const dispatch = useDispatch();
 
     const subTotal = cartItems.reduce(
-        (acc, item) => acc + item.price * item.qty,
+        (acc, item) => acc + item.totalrating * item.qty,
         0
     );
 
@@ -20,7 +20,7 @@ const Cartbody = () => {
             <div className='bg-white02 rounded-lg px-[56px] py-[32px]'>
                 <div className='grid grid-cols-[607px_171px_171px_171px] gap-x-12'>
                     <h4 className='font-Montserrat font-bold text-base text-black01 uppercase'>Product</h4>
-                    <h4 className='font-Montserrat font-bold text-base text-black01 uppercase'>Price</h4>
+                    <h4 className='font-Montserrat font-bold text-base text-black01 uppercase'>totalrating</h4>
                     <h4 className='font-Montserrat font-bold text-base text-black01 uppercase'>Qty</h4>
                     <h4 className='font-Montserrat font-bold text-base text-black01 uppercase'>Total</h4>
                 </div>
@@ -52,7 +52,7 @@ const Cartbody = () => {
                                 </div>
                             </div>
                             <div>
-                                <h6 className='font-Poppins font-semibold text-xl'>${item.price.toFixed(2)}</h6>
+                                <h6 className='font-Poppins font-semibold text-xl'>${item.totalrating.toFixed(2)}</h6>
                             </div>
 
                             <div className='flex items-center gap-x-8'>
@@ -75,7 +75,7 @@ const Cartbody = () => {
                             </div>
                             <div>
                                 <h6 className='font-Poppins text-xl text-black01 font-semibold'>
-                                    ${(item.price * item.qty).toFixed(2)}
+                                    ${(item.totalrating * item.qty).toFixed(2)}
                                 </h6>
                             </div>
                         </div>

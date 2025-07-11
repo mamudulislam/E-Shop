@@ -21,7 +21,7 @@ const Checkoutcount = ({ product }) => {
                 id: product.id,
                 pName: product.pName,
                 pCategory: product.pCategory,
-                price: product.price,
+                totalrating: product.totalrating,
                 imges: product?.imges,
                 variant: product.variant
             },
@@ -72,8 +72,6 @@ const Checkoutcount = ({ product }) => {
                             <FiPlus />
                         </button>
                     </div>
-
-                    {/* Buttons */}
                     <div className='flex items-center gap-x-3 ml-8'>
                         <Commonbuttun className="!bg-orange !px-10 !h-12 !border-none">
                             <span className="font-montserrat font-bold text-lg text-white">
