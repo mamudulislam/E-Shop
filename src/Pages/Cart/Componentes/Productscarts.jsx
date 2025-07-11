@@ -1,4 +1,3 @@
-import React from 'react';
 import { BsTrash3 } from 'react-icons/bs';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
@@ -24,7 +23,6 @@ const Productscarts = ({ id, pCategory, pName, variant, price, imges, qty }) => 
     return (
         <div className='px-[56px] py-[32px] hover:border-black100 border border-transparent relative group mb-4 bg-white rounded-lg shadow-sm'>
             <div className='grid grid-cols-[2fr_1fr_1fr_1fr] gap-x-12 items-center'>
-                {/* Product Info */}
                 <div className='flex items-center gap-x-5'>
                     <div className='w-[120px] h-[120px] bg-white01 rounded-md overflow-hidden'>
                         {imges && imges[0] && (
@@ -42,12 +40,10 @@ const Productscarts = ({ id, pCategory, pName, variant, price, imges, qty }) => 
                     </div>
                 </div>
 
-                {/* Price */}
                 <div>
                     <h6 className='font-Poppins font-semibold text-xl'>${price.toFixed(2)}</h6>
                 </div>
 
-                {/* Quantity Controls */}
                 <div>
                     <div className='flex items-center justify-start'>
                         <div className='flex items-center gap-x-4'>
@@ -70,13 +66,11 @@ const Productscarts = ({ id, pCategory, pName, variant, price, imges, qty }) => 
                     </div>
                 </div>
 
-                {/* Total */}
                 <div>
                     <h6 className='font-Poppins text-xl text-black01 font-semibold'>${(price * qty).toFixed(2)}</h6>
                 </div>
             </div>
 
-            {/* Remove Button */}
             <button
                 onClick={handleRemove}
                 className='absolute top-1/2 right-12 transform -translate-y-1/2 w-12 h-12 rounded-full bg-orange flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-orange-dark'
