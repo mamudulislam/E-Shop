@@ -43,7 +43,7 @@ const ContactForm = () => {
                             Phone Number <span className='text-orange'>*</span>
                         </label>
                         <input
-                            type="text"
+                            type="number"
                             name="phone"
                             placeholder="+8801234567890"
                             className='w-full border border-black100 p-5 rounded-[10px] outline-none'

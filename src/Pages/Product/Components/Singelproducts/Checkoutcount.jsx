@@ -21,7 +21,7 @@ const Checkoutcount = ({ product }) => {
                 id: product.id,
                 pName: product.pName,
                 pCategory: product.pCategory,
-                totalrating: product.totalrating,
+                price: product.price,
                 imges: product?.imges,
                 variant: product.variant
             },

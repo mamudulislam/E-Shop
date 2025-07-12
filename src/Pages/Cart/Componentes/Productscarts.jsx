@@ -3,7 +3,7 @@ import { FiPlus, FiMinus } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
 import { updateQty, removecart } from '../../../settings/Redux/feature/Cartslice';
 
-const Productscarts = ({ id, pCategory, pName, variant, totalrating, imges, qty }) => {
+const Productscarts = ({ id, pCategory, pName, variant, price, imges, qty }) => {
     const dispatch = useDispatch();
 
     const handleIncrease = () => {
@@ -41,7 +41,7 @@ const Productscarts = ({ id, pCategory, pName, variant, totalrating, imges, qty 
                 </div>
 
                 <div>
-                    <h6 className='font-Poppins font-semibold text-xl'>${totalrating.toFixed(2)}</h6>
+                    <h6 className='font-Poppins font-semibold text-xl'>${price.toFixed(2)}</h6>
                 </div>
 
                 <div>
@@ -67,7 +67,7 @@ const Productscarts = ({ id, pCategory, pName, variant, totalrating, imges, qty 
                 </div>
 
                 <div>
-                    <h6 className='font-Poppins text-xl text-black01 font-semibold'>${(totalrating * qty).toFixed(2)}</h6>
+                    <h6 className='font-Poppins text-xl text-black01 font-semibold'>${(price * qty).toFixed(2)}</h6>
                 </div>
             </div>
 
