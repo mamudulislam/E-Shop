@@ -4,18 +4,21 @@ import { BsTrash3 } from 'react-icons/bs';
 import { FiPlus } from 'react-icons/fi';
 import { LuMinus } from 'react-icons/lu';
 import { updateQty, removecart } from '../../../settings/Redux/feature/Cartslice';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { gotDiscounty } from '../../../Utils/gotDiscounty';
 
 const Cartbody = () => {
     const cartItems = useSelector((state) => state.cart.items);
     const dispatch = useDispatch();
-
+    const navigate = useNavigate()
     const subTotal = cartItems.reduce(
         (acc, item) => acc + gotDiscounty(item.price, item.discout) * item.qty,
         0
     );
     // console.log(first)
+    let handelorderproducts = () => {
+        navigate("/Checkout")
+    }
     return (
         <div>
             <div className='bg-white02 rounded-lg px-[56px] py-[32px]'>
@@ -129,8 +132,8 @@ const Cartbody = () => {
                             <Link to="/" className="text-black01 font-semibold">
                                 Continue Shopping
                             </Link>
-                            <button className="bg-orange text-white px-6 py-3 rounded-md font-semibold">
-                                Update Cart
+                            <button onClick={handelorderproducts} className="bg-orange text-white px-6 py-3 rounded-md font-semibold">
+                                Order Products
                             </button>
                         </div>
                     </>

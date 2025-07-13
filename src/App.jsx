@@ -9,6 +9,7 @@ import Blog from './Pages/Blog/Blog'
 import Contact from './Pages/Contact/Contact'
 import Rootlaout from './Layouts/RootLaout/Rootlaout'
 import Singelproducts from './Pages/Product/Components/Singelproducts/Singelproducts'
+import Payment from './Pages/Checkout/Componentes/Payment'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -22,6 +23,7 @@ const App = () => {
           <Route path='/Checkout' element={<Checkout />} />
           <Route path='/Blog' element={<Blog />} />
           <Route path='/Contact' element={<Contact />} />
+          <Route path='/Payment' element={<Payment />} />
         </Route >
       </Route >
 

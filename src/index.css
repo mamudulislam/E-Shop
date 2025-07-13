@@ -128,3 +128,36 @@
 .custom-pagination .ant-pagination-item-active a {
     color: white;
 }
+
+/* step */
+
+.custom-steps .ant-steps-item-process .ant-steps-item-icon {
+    background-color: #ff624c !important;
+    border-color: #ff624c !important;
+}
+
+.custom-steps .ant-steps-item-process .ant-steps-item-icon>.ant-steps-icon {
+    color: white !important;
+}
+
+.custom-steps .ant-steps-item-process .ant-steps-item-title {
+    color: #ff624c !important;
+}
+
+.custom-steps .ant-steps-item-finish .ant-steps-item-icon {
+    border-color: #ff624c !important;
+    color: #ff624c !important;
+}
+
+.custom-steps .ant-steps-item-finish .ant-steps-item-title {
+    color: #ff624c !important;
+}
+
+.custom-steps .ant-steps-item:hover .ant-steps-item-title {
+    color: #ff624c !important;
+    cursor: pointer;
+}
+
+.custom-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title::after {
+    background-color: #ff624c !important;
+}
