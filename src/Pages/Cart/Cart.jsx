@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Container from '../../Golobalcomponentes/Container';
 import Cartbody from './Componentes/Cartbody';
+import { Helmet } from 'react-helmet-async';
 
 const Cart = () => {
     const { pathname } = useLocation();
@@ -9,6 +10,9 @@ const Cart = () => {
     console.log(pageName)
     return (
         <>
+            <Helmet>
+                <title>Cart</title>
+            </Helmet>
             <Container>
                 <div className='mt-[64px]'>
                     <div className="flex items-center gap-x-4 font-montserrat text-black01">

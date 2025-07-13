@@ -2,6 +2,7 @@ import React from 'react'
 import { getstar } from '../../../../Utils/genaretrating'
 import { gotDiscounty } from '../../../../Utils/gotDiscounty'
 import ReactImageMagnify from 'react-image-magnify'
+import { Helmet } from 'react-helmet-async'
 const Productdetailes = ({
     imges,
     totalrating,
@@ -18,6 +19,9 @@ const Productdetailes = ({
     return (
         <>
             <div>
+                <Helmet>
+                    <title>Product Detailes</title>
+                </Helmet>
                 <div className='grid grid-cols-[2fr_1.5fr] gap-x-8'>
                     <div className='relative w-full h-[500px] overflow-visible rounded-xl border border-gray flex items-center justify-center'>
                         {/* <img src={imges} alt="" className='w-full h-full object-center'
