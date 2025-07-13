@@ -1,9 +1,11 @@
+import React from 'react';
 import { BsTrash3 } from 'react-icons/bs';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
 import { updateQty, removecart } from '../../../settings/Redux/feature/Cartslice';
+import { gotDiscounty } from '../../../Utils/gotDiscounty';
 
-const Productscarts = ({ id, pCategory, pName, variant, price, imges, qty }) => {
+const Productscarts = ({ id, pCategory, pName, variant, price, imges, qty, discout }) => {
     const dispatch = useDispatch();
 
     const handleIncrease = () => {
@@ -41,7 +43,16 @@ const Productscarts = ({ id, pCategory, pName, variant, price, imges, qty }) => 
                 </div>
 
                 <div>
-                    <h6 className='font-Poppins font-semibold text-xl'>${price.toFixed(2)}</h6>
+                    <div>
+                        <p className="font-poppins text-2xl font-semibold text-black01 group-hover:text-orange transition-all ease-linear duration-100">
+                            ${gotDiscounty(price, discout).toFixed(2)}
+                        </p>
+                        {discout && (
+                            <span className="font-montserrat text-base font-normal text-black01 line-through">
+                                ${price.toFixed(2)}
+                            </span>
+                        )}
+                    </div>
                 </div>
 
                 <div>
@@ -67,7 +78,9 @@ const Productscarts = ({ id, pCategory, pName, variant, price, imges, qty }) => 
                 </div>
 
                 <div>
-                    <h6 className='font-Poppins text-xl text-black01 font-semibold'>${(price * qty).toFixed(2)}</h6>
+                    <h6 className='font-Poppins text-xl text-black01 font-semibold'>
+                        ${(gotDiscounty(price, discout) * qty).toFixed(2)}
+                    </h6>
                 </div>
             </div>
 

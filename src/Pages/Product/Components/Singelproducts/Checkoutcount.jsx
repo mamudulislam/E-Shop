@@ -17,14 +17,7 @@ const Checkoutcount = ({ product }) => {
 
     const handleAddToCart = () => {
         dispatch(addcart({
-            product: {
-                id: product.id,
-                pName: product.pName,
-                pCategory: product.pCategory,
-                price: product.price,
-                imges: product?.imges,
-                variant: product.variant
-            },
+            product: product,
             qty: countValue
         }));
         navigate('/Cart');
