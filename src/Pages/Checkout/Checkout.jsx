@@ -5,6 +5,7 @@ import Container from '../../Golobalcomponentes/Container'
 import { Link, useLocation } from 'react-router-dom'
 import Billingdetails from './Componentes/Billingdetails'
 import Ordersummary from './Componentes/Ordersummary'
+import Subscribe from '../Home/Componentes/Subscribe/Subscribe'
 
 const Checkout = () => {
     const { pathname } = useLocation();
@@ -41,6 +42,7 @@ const Checkout = () => {
                             <Ordersummary handleSubmit={handleSubmit} />
                         </div>
                     </div>
+                    <Subscribe />
                 </div>
             </Container>
         </>

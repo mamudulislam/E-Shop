@@ -7,6 +7,7 @@ import { gotDiscounty } from '../../Utils/gotDiscounty'
 import { FiHeart } from 'react-icons/fi'
 
 const Productcardlist = ({
+    id,
     imges,
     pCategory,
     pName,
@@ -15,6 +16,9 @@ const Productcardlist = ({
     price,
     discout,
 }) => {
+    console.log(id)
+    const removeSpace = pName.replace(/\s/g, "")
+    console.log(removeSpace)
     return (
         <>
             <div className="relative group border border-transparent hover:border-black100 p-6 rounded-[10px] grid grid-cols-[0.8fr_2fr_1fr]">
@@ -40,7 +44,7 @@ const Productcardlist = ({
                             }
                         >
                             <Link
-                                to="/product"
+                                to={`/Product/${id}`}
                                 className="font-poppins text-xl font-semibold text-black01 truncate"
                             >
                                 {pName}
@@ -48,7 +52,7 @@ const Productcardlist = ({
                         </Tooltip>
                     ) : (
                         <Link
-                            to="/product"
+                            to={`/Product/${id}`}
                             className="font-poppins text-xl font-semibold text-black01 truncate group-hover:text-orange transition-all ease-linear duration-100"
                         >
                             {pName}
