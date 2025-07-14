@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { billingInitialValues, billingDetailsSchema } from './Schema';
 
-const Billingdetails = () => {
+const Billingdetails = ({ formikRef }) => {
     return (
         <div className="max-w-3xl mx-auto p-6">
             <h2 className="font-semibold mb-6 font-Poppins text-[36px] text-black">
@@ -10,13 +10,13 @@ const Billingdetails = () => {
             </h2>
 
             <Formik
+                innerRef={formikRef}
                 initialValues={billingInitialValues}
                 validationSchema={billingDetailsSchema}
                 validateOnBlur={false}
                 validateOnChange={false}
                 onSubmit={(values, { setTouched }) => {
-                    // Log values, including orderNotes, inside onSubmit
-                    console.log('Order Notes:', values.orderNotes);  // Access orderNotes from values
+                    console.log('Order Notes:', values.orderNotes);
                     setTouched(
                         Object.keys(values).reduce((acc, key) => {
                             acc[key] = true;
@@ -25,8 +25,7 @@ const Billingdetails = () => {
                     );
                     alert('Form submitted successfully!');
                     console.log('Submitted data:', values);
-                }}
-            >
+                }}            >
                 {({ errors, touched }) => (
                     <Form className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
@@ -233,14 +232,6 @@ const Billingdetails = () => {
                             />
                         </div>
 
-                        <div className="md:col-span-2">
-                            <button
-                                type="submit"
-                                className="bg-orange text-white px-6 py-3 rounded-md mt-4"
-                            >
-                                Submit
-                            </button>
-                        </div>
                     </Form>
                 )}
             </Formik>

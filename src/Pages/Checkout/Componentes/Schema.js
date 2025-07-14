@@ -30,5 +30,6 @@ export const billingDetailsSchema = Yup.object({
     .required('ZIP Code is required')
     .matches(/^\d{5,6}$/, 'ZIP Code must be 5 or 6 digits'),
   orderNotes: Yup.string()
+    .required('Order notes are required')
     .max(150, 'Order Notes cannot exceed 150 characters'),
 });

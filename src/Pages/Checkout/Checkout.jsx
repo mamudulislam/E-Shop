@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
 import Step from './Componentes/Step'
 import Container from '../../Golobalcomponentes/Container'
@@ -9,6 +9,12 @@ import Ordersummary from './Componentes/Ordersummary'
 const Checkout = () => {
     const { pathname } = useLocation();
     const pageName = pathname.split("/").slice(1)[0];
+    const formikRef = useRef();
+    const handleSubmit = () => {
+        if (formikRef.current) {
+            formikRef.current.handleSubmit();
+        }
+    };
     return (
         <>
             <Helmet>
@@ -29,10 +35,10 @@ const Checkout = () => {
                     </h1>
                     <div className='grid grid-cols-[2fr_1fr] gap-x-[56px] mt-20'>
                         <div>
-                            <Billingdetails />
+                            <Billingdetails formikRef={formikRef} />
                         </div>
                         <div>
-                            <Ordersummary />
+                            <Ordersummary handleSubmit={handleSubmit} />
                         </div>
                     </div>
                 </div>
