@@ -17,7 +17,7 @@ const TechTalk = () => {
                         </h3>
                         <p className='font-montserrat font-normal text-sm lg:text-xl text-black01 mt-1 lg:mt-4'>Stay up to date with the latest trends, reviews, and insights from our experts.</p>
                     </div>
-                    <Link to="/Product" className='flex items-center gap-x-2 font-montserrat font-bold text-sm lg:text-base text-orange group self-end'>
+                    <Link to="/Blog" className='flex items-center gap-x-2 font-montserrat font-bold text-sm lg:text-base text-orange group self-end'>
                         {t("View All")}{" "}
                         <span className='group-hover:translate-x-2 transition-transform duration-400'>
                             <CgArrowLongRight size={30} />
