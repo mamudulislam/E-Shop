@@ -5,24 +5,26 @@ import { TechTalksData } from "../../Pages/Home/Componentes/TechTalk/TechTalksDa
 import { CiSearch } from "react-icons/ci";
 import { Pagination } from "antd";
 
-const BlogPostCard = ({ image, title, category, date }) => (
-    <div className="border border-transparent hover:border-black100 hover:p-[45px] hover:rounded-[25px] transition-all duration-300">
-        <div className="max-h-[406px] rounded-[25px] overflow-hidden">
-            <img src={image} alt={title} className="w-full h-full object-cover" />
-        </div>
-        <div className="mt-8">
-            <h5 className="font-poppins font-semibold text-[24px] text-black01">{title}</h5>
-            <div className="flex items-center justify-between mt-8">
-                <div className="py-2 px-2.5 bg-orange rounded-[10px]">
-                    <span className="font-montserrat font-bold text-base text-white">{category}</span>
-                </div>
-                <span className="flex items-center gap-x-2 font-montserrat font-normal text-sm text-black01">
-                    <HiMiniClock color="#303030" size={20} />
-                    {date}
-                </span>
+const BlogPostCard = ({ id, image, title, category, date }) => (
+    <Link to={`/Blog/${id}`}>
+        <div className="border border-transparent hover:border-black100 hover:p-[45px] hover:rounded-[25px] transition-all duration-300">
+            <div className="max-h-[406px] rounded-[25px] overflow-hidden">
+                <img src={image} alt={title} className="w-full h-full object-cover" />
             </div>
-        </div>
-    </div>
+            <div className="mt-8">
+                <h5 className="font-poppins font-semibold text-[24px] text-black01">{title}</h5>
+                <div className="flex items-center justify-between mt-8">
+                    <div className="py-2 px-2.5 bg-orange rounded-[10px]">
+                        <span className="font-montserrat font-bold text-base text-white">{category}</span>
+                    </div>
+                    <span className="flex items-center gap-x-2 font-montserrat font-normal text-sm text-black01">
+                        <HiMiniClock color="#303030" size={20} />
+                        {date}
+                    </span>
+                </div>
+            </div>
+        </div >
+    </Link>
 );
 
 const BlogPageHeader = () => (
@@ -44,15 +46,11 @@ const BlogCard = (props) => {
     const [activeCategory, setActiveCategory] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 6;
-
-    // Filter blogs
     const filteredBlogs = activeCategory
         ? TechTalksData.filter((blog) =>
             blog.category?.toLowerCase().includes(activeCategory.toLowerCase())
         )
         : TechTalksData;
-
-    // Paginate filtered blogs
     const paginatedBlogs = filteredBlogs.slice(
         (currentPage - 1) * pageSize,
         currentPage * pageSize
@@ -68,9 +66,7 @@ const BlogCard = (props) => {
 
             <div className="mt-[322px] ml-[110px]">
                 <div className="grid grid-cols-[1fr_2fr] gap-[56px]">
-                    {/* Sidebar */}
                     <div>
-                        {/* Search */}
                         <div className="mb-[40px]">
                             <div className="p-10 bg-orange rounded-[25px]">
                                 <h3 className="font-Poppins font-semibold text-[24px] text-white mb-[24px]">Blog Search</h3>
@@ -86,8 +82,6 @@ const BlogCard = (props) => {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Categories */}
                         <div className="mb-[40px]">
                             <div className="p-10 bg-black01 rounded-[25px]">
                                 <h4 className="font-Poppins font-semibold text-[24px] text-white mb-[25px] cursor-pointer">Categories</h4>
@@ -96,7 +90,7 @@ const BlogCard = (props) => {
                                         className="mb-[22px]"
                                         key={idx}
                                         onClick={() => {
-                                            setCurrentPage(1); // reset to page 1 on filter
+                                            setCurrentPage(1);
                                             setActiveCategory(prev => prev === cat ? null : cat);
                                         }}
                                     >
@@ -108,8 +102,6 @@ const BlogCard = (props) => {
                                 ))}
                             </div>
                         </div>
-
-                        {/* Tags */}
                         <div className="p-5 bg-white02 mb-10">
                             <h4 className="font-Poppins font-semibold text-[24px] text-black mb-6">Tags</h4>
                             <div className="space-y-2">
@@ -129,8 +121,6 @@ const BlogCard = (props) => {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Recent Posts */}
                         <div>
                             <h3 className="font-Poppins font-semibold text-[24px] text-black01">Recent Posts</h3>
                             <div className="border-3 w-[156px] text-orange"></div>
@@ -143,6 +133,7 @@ const BlogCard = (props) => {
                                             Featured
                                         </div>
                                         <BlogPostCard
+                                            id={blog.id}
                                             image={blog.image}
                                             title={blog.title}
                                             category={blog.postedBy}
@@ -153,8 +144,6 @@ const BlogCard = (props) => {
                             </div>
                         </div>
                     </div>
-
-                    {/* Blog Cards + Pagination */}
                     <div className="flex flex-col items-center gap-10">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 w-full">
                             {paginatedBlogs.map((blog) => (
@@ -163,6 +152,7 @@ const BlogCard = (props) => {
                                         {blog.category}
                                     </div>
                                     <BlogPostCard
+                                        id={blog.id}
                                         image={blog.image}
                                         title={blog.title}
                                         category={blog.postedBy}
@@ -171,7 +161,6 @@ const BlogCard = (props) => {
                                 </div>
                             ))}
                         </div>
-
                         <div className="flex justify-center mt-4">
                             <Pagination
                                 current={currentPage}

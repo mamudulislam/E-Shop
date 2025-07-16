@@ -1,3 +1,4 @@
+
 import blogimages from "../../../../assets/blog/blogimages.jpg";
 
 export const TechTalksData = [
@@ -8,6 +9,7 @@ export const TechTalksData = [
     category: "Tech News",
     postedBy: "Alexa",
     date: "10 April 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 2,
@@ -16,6 +18,7 @@ export const TechTalksData = [
     category: "Product Reviews",
     postedBy: "Rumi",
     date: "12 April 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 3,
@@ -24,6 +27,7 @@ export const TechTalksData = [
     category: "How-To Guides",
     postedBy: "Alexa",
     date: "14 April 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 4,
@@ -32,6 +36,7 @@ export const TechTalksData = [
     category: "Lifestyle",
     postedBy: "Mamudul",
     date: "16 April 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 5,
@@ -40,6 +45,7 @@ export const TechTalksData = [
     category: "Emerging Technologies",
     postedBy: "Rihana",
     date: "18 April 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 6,
@@ -48,6 +54,7 @@ export const TechTalksData = [
     category: "Tech News",
     postedBy: "Mithu",
     date: "20 April 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 7,
@@ -56,6 +63,7 @@ export const TechTalksData = [
     category: "Product Reviews",
     postedBy: "Dhune",
     date: "22 April 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 8,
@@ -64,6 +72,7 @@ export const TechTalksData = [
     category: "How-To Guides",
     postedBy: "Farzana",
     date: "24 April 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 9,
@@ -72,6 +81,7 @@ export const TechTalksData = [
     category: "Lifestyle",
     postedBy: "Jamil",
     date: "26 April 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 10,
@@ -80,6 +90,7 @@ export const TechTalksData = [
     category: "Emerging Technologies",
     postedBy: "Tanvir",
     date: "28 April 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 11,
@@ -88,6 +99,7 @@ export const TechTalksData = [
     category: "Tech News",
     postedBy: "Alexa",
     date: "30 April 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 12,
@@ -96,6 +108,7 @@ export const TechTalksData = [
     category: "Product Reviews",
     postedBy: "Rumi",
     date: "02 May 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 13,
@@ -104,6 +117,7 @@ export const TechTalksData = [
     category: "Product Reviews",
     postedBy: "Mithu",
     date: "04 May 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 14,
@@ -112,6 +126,7 @@ export const TechTalksData = [
     category: "Product Reviews",
     postedBy: "Mamudul",
     date: "06 May 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 15,
@@ -120,6 +135,7 @@ export const TechTalksData = [
     category: "Product Reviews",
     postedBy: "Rihana",
     date: "08 May 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 16,
@@ -128,6 +144,7 @@ export const TechTalksData = [
     category: "Product Reviews",
     postedBy: "Dhune",
     date: "10 May 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 17,
@@ -136,6 +153,7 @@ export const TechTalksData = [
     category: "Product Reviews",
     postedBy: "Tanvir",
     date: "12 May 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 18,
@@ -144,6 +162,7 @@ export const TechTalksData = [
     category: "Product Reviews",
     postedBy: "Jamil",
     date: "14 May 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 19,
@@ -152,6 +171,7 @@ export const TechTalksData = [
     category: "Product Reviews",
     postedBy: "Farzana",
     date: "16 May 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
   {
     id: 20,
@@ -160,5 +180,6 @@ export const TechTalksData = [
     category: "Product Reviews",
     postedBy: "Alexa",
     date: "18 May 2023",
+    Descriptions:"Technology is constantly evolving, and keeping up with the latest trends can be a daunting task. From new gadgets and devices to emerging technologies and industry shifts, it can be challenging to stay up to date with the latest tech trends. In this article, we'll explore some of the latest tech trends that you need to know about to stay ahead of the curve."
   },
 ];
