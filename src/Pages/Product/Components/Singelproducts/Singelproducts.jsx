@@ -27,10 +27,11 @@ const Singelproducts = () => {
         } else {
             dispatch(setCountreset());
         }
+
         return () => {
             dispatch(setCountreset());
         };
-    }, [dispatch, singleProduct?.id]);
+    }, [dispatch, singleProduct?.id, cartItems]);
 
     if (!singleProduct) {
         return <div className="text-center py-20 text-red-500">Product not found.</div>;
@@ -38,9 +39,9 @@ const Singelproducts = () => {
 
     return (
         <Container>
-            <div className='mt-20'>
+            <div className="mt-20 md:mt-6">
                 <div className="flex items-center gap-x-4 font-montserrat text-black01">
-                    <Link to="/">Home</Link>
+                    <Link to="/" className="hover:text-orange transition-colors duration-200">Home</Link>
                     <div className="w-[1px] h-[20px] bg-black100"></div>
                     <span>{singleProduct.pCategory}</span>
                     <div className="w-[1px] h-[20px] bg-black100"></div>
@@ -48,16 +49,20 @@ const Singelproducts = () => {
                     <div className="w-[1px] h-[20px] bg-black100"></div>
                     <span className="font-bold">{singleProduct.pName}</span>
                 </div>
-                <div className='mt-[48px]'>
+
+                <div className="mt-12 sm:mt-16">
                     <Productdetailes {...singleProduct} />
                 </div>
-                <div className='mt-[48px]'>
+
+                <div className="mt-12 sm:mt-16">
                     <Checkoutcount product={singleProduct} />
                 </div>
-                <div className='mt-[48px]'>
+
+                <div className="mt-12 sm:mt-16">
                     <ProductDescription description={singleProduct.description} />
                 </div>
-                <div className='mt-[48px]'>
+
+                <div className="mt-12 sm:mt-16">
                     <Relatedproducts
                         Relatedproduct={Featureddata.filter(
                             (product) =>

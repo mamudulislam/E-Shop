@@ -21,19 +21,20 @@ const ShowcaseHeader = ({ startIndex, endIndex, totalItems }) => {
 
     return (
         <div>
-            <h1 className="font-montserrat text-[36px] font-bold text-black">
+            <h1 className="font-montserrat text-2xl sm:text-3xl md:text-[36px] font-bold text-black">
                 {t("Products")}
             </h1>
-            <div className="flex items-center justify-between mt-6">
-                <p className="font-montserrat text-base text-black01">
+
+            <div className="mt-4 sm:mt-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                <p className="font-montserrat text-sm sm:text-base text-black01">
                     {t(`Showing ${startIndex} - ${endIndex} of ${totalItems} results.`)}
                 </p>
-                <div className="flex items-center gap-x-4">
-                    <div className="flex items-center gap-x-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div className="flex items-center gap-2">
                         <span className="font-montserrat font-normal text-sm lg:text-base">
                             {t("Sort By")}:
                         </span>
-                        <div className="w-[190px]">
+                        <div className="w-full sm:w-[190px]">
                             <CustomDropdown
                                 className="font-montserrat font-bold text-sm lg:text-base text-orange cursor-pointer w-full flex justify-between items-center"
                                 icon={true}
@@ -41,7 +42,8 @@ const ShowcaseHeader = ({ startIndex, endIndex, totalItems }) => {
                             />
                         </div>
                     </div>
-                    <div className="w-[1px] h-[20px] bg-black100" />
+
+                    <div className="hidden sm:block w-[1px] h-[20px] bg-black100" />
                     <div className="flex items-center gap-x-2">
                         <span
                             className={`cursor-pointer hover:text-orange ${viewMode === "grid" ? "text-orange" : ""

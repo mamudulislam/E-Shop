@@ -23,7 +23,7 @@ const Step = () => {
     };
 
     return (
-        <div style={{ padding: '0px 430px' }}>
+        <div className="px-4 sm:px-20 md:px-40 lg:px-64 xl:px-[430px]">
             <Steps
                 current={current}
                 onChange={onChange}

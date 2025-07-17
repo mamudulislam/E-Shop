@@ -23,14 +23,14 @@ const BlogPostCard = ({ id, image, title, category, date }) => (
                     </span>
                 </div>
             </div>
-        </div >
+        </div>
     </Link>
 );
 
 const BlogPageHeader = () => (
-    <div className="mt-[274px] ml-[110px]">
-        <h2 className="font-Poppins font-bold text-[56px] text-black01">Tech Talk Blog</h2>
-        <div className="flex items-center gap-x-4 font-montserrat text-black01">
+    <div className="mt-[100px] sm:mt-[150px] md:mt-[200px] lg:mt-[274px] ml-4 md:ml-[60px] lg:ml-[110px]">
+        <h2 className="font-Poppins font-bold text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-black01">Tech Talk Blog</h2>
+        <div className="flex items-center gap-x-4 font-montserrat text-black01 mt-4">
             <Link to="/">Home</Link>
             <div className="w-[1px] h-[20px] bg-black100"></div>
             <span className="font-bold">Blog</span>
@@ -46,11 +46,13 @@ const BlogCard = (props) => {
     const [activeCategory, setActiveCategory] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 6;
+
     const filteredBlogs = activeCategory
         ? TechTalksData.filter((blog) =>
             blog.category?.toLowerCase().includes(activeCategory.toLowerCase())
         )
         : TechTalksData;
+
     const paginatedBlogs = filteredBlogs.slice(
         (currentPage - 1) * pageSize,
         currentPage * pageSize
@@ -64,26 +66,28 @@ const BlogCard = (props) => {
         <div>
             <BlogPageHeader />
 
-            <div className="mt-[322px] ml-[110px]">
-                <div className="grid grid-cols-[1fr_2fr] gap-[56px]">
+            <div className="mt-[100px] sm:mt-[150px] md:mt-[200px] lg:mt-[322px] ml-4 md:ml-[60px] lg:ml-[110px] pr-4 md:pr-[40px]">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-[40px] md:gap-[56px]">
                     <div>
                         <div className="mb-[40px]">
-                            <div className="p-10 bg-orange rounded-[25px]">
+                            <div className="p-6 md:p-10 bg-orange rounded-[25px]">
                                 <h3 className="font-Poppins font-semibold text-[24px] text-white mb-[24px]">Blog Search</h3>
-                                <div className="flex items-center gap-x-4 bg-white rounded-md px-4">
+                                <div className="flex items-center gap-x-4 bg-white rounded-md px-4 relative">
                                     <input
                                         type="text"
                                         placeholder="Search Article ..."
                                         className="flex-1 py-3 px-4 outline-none text-black"
                                     />
-                                    <button type="submit" className="text-gray-500 hover:text-black">
-                                        <CiSearch size={24} />
-                                    </button>
+                                    <div className="absolute right-3">
+                                        <button type="submit" className="text-gray-500 hover:text-black transition-colors duration-200 ">
+                                            <CiSearch size={24} />
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div className="mb-[40px]">
-                            <div className="p-10 bg-black01 rounded-[25px]">
+                            <div className="p-6 md:p-10 bg-black01 rounded-[25px]">
                                 <h4 className="font-Poppins font-semibold text-[24px] text-white mb-[25px] cursor-pointer">Categories</h4>
                                 {["Tech News", "Product Reviews", "How-To Guides", "Lifestyle", "Emerging Technologies"].map((cat, idx) => (
                                     <div
@@ -102,17 +106,19 @@ const BlogCard = (props) => {
                                 ))}
                             </div>
                         </div>
+
+
                         <div className="p-5 bg-white02 mb-10">
                             <h4 className="font-Poppins font-semibold text-[24px] text-black mb-6">Tags</h4>
                             <div className="space-y-2">
-                                <div className="grid grid-cols-4 gap-2">
+                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                                     {["Tech", "Trends", "Innovat", "Tips"].map((tag, i) => (
                                         <div key={i} className="px-5 py-3 bg-white font-Montserrat font-normal text-[14px] text-black01 cursor-pointer">
                                             {tag}
                                         </div>
                                     ))}
                                 </div>
-                                <div className="grid grid-cols-4 gap-2">
+                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                                     {["Gadget", "Guide", "Gadget"].map((tag, i) => (
                                         <div key={i} className="px-5 py-3 bg-white font-Montserrat font-normal text-[14px] text-black01 cursor-pointer">
                                             {tag}
@@ -121,6 +127,7 @@ const BlogCard = (props) => {
                                 </div>
                             </div>
                         </div>
+
                         <div>
                             <h3 className="font-Poppins font-semibold text-[24px] text-black01">Recent Posts</h3>
                             <div className="border-3 w-[156px] text-orange"></div>
@@ -144,8 +151,9 @@ const BlogCard = (props) => {
                             </div>
                         </div>
                     </div>
+
                     <div className="flex flex-col items-center gap-10">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 w-full">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 w-full">
                             {paginatedBlogs.map((blog) => (
                                 <div className="relative" key={blog.id}>
                                     <div className="absolute top-4 left-4 z-10 bg-orange text-white text-xs font-bold font-montserrat py-1 px-3 rounded-full">
@@ -161,7 +169,7 @@ const BlogCard = (props) => {
                                 </div>
                             ))}
                         </div>
-                        <div className="flex justify-center mt-4">
+                        <div className="flex justify-center mt-4 w-full">
                             <Pagination
                                 current={currentPage}
                                 pageSize={pageSize}

@@ -14,6 +14,7 @@ const Checkoutcount = ({ product }) => {
     const navigate = useNavigate();
     const countValue = useSelector((state) => state.count.count);
     const disableWhenOne = countValue === 1;
+    const windowWidth = window.innerWidth;
 
     const handleAddToCart = () => {
         dispatch(addcart({
@@ -23,20 +24,24 @@ const Checkoutcount = ({ product }) => {
         navigate('/Cart');
     };
 
+    const iconSize = windowWidth >= 640 ? 30 : 24;
+
     return (
-        <div>
-            <div className='flex items-center justify-between flex-wrap gap-y-6'>
-                <div className='flex items-center gap-x-4'>
+        <div className="py-6">
+            <div className="flex flex-wrap items-center justify-between gap-y-6">
+                <div className="flex flex-wrap gap-8 md:gap-12">
                     {Supportdata.slice(1, 4).map((item, index) => {
                         const Icon = item.icon;
                         return (
-                            <div className='flex items-center gap-x-5' key={index}>
-                                <span className='text-black01'><Icon /></span>
+                            <div className="flex items-center gap-x-5" key={index}>
+                                <span className="text-black01">
+                                    <Icon />
+                                </span>
                                 <div>
-                                    <h5 className='font-Montserrat font-bold text-sm md:text-base text-black01'>
+                                    <h5 className="font-Montserrat font-bold text-sm md:text-base text-black01">
                                         {item.title}
                                     </h5>
-                                    <p className='font-Montserrat font-normal text-xs md:text-base text-black01'>
+                                    <p className="font-Montserrat font-normal text-xs md:text-base text-black01">
                                         {item.subtitle}
                                     </p>
                                 </div>
@@ -45,37 +50,38 @@ const Checkoutcount = ({ product }) => {
                     })}
                 </div>
 
-                <div className='flex items-center justify-between gap-x-3'>
-                    {/* Counter */}
-                    <div className='flex items-center gap-x-8'>
+
+                <div className="flex flex-wrap items-center justify-between gap-x-6">
+
+                    <div className="flex items-center gap-x-6">
                         <button
                             disabled={disableWhenOne}
-                            className='w-[56px] h-[56px] hover:bg-white02 rounded-full flex items-center justify-center cursor-pointer disabled:opacity-50'
+                            className="w-[50px] h-[50px] hover:bg-white02 rounded-full flex items-center justify-center cursor-pointer disabled:opacity-50"
                             onClick={() => dispatch(setCountDec())}
                         >
                             <LuMinus />
                         </button>
-                        <div className='font-Poppins text-black01 font-semibold text-[36px]'>
+                        <div className="font-Poppins text-black01 font-semibold text-[24px] sm:text-[36px]">
                             {countValue}
                         </div>
                         <button
-                            className='w-[56px] h-[56px] hover:bg-white02 rounded-full flex items-center justify-center cursor-pointer'
+                            className="w-[50px] h-[50px] hover:bg-white02 rounded-full flex items-center justify-center cursor-pointer"
                             onClick={() => dispatch(setCountInc())}
                         >
                             <FiPlus />
                         </button>
                     </div>
-                    <div className='flex items-center gap-x-3 ml-8'>
-                        <Commonbuttun className="!bg-orange !px-10 !h-12 !border-none">
-                            <span className="font-montserrat font-bold text-lg text-white">
+                    <div className="flex items-center gap-x-4 sm:gap-x-6">
+                        <Commonbuttun className="!bg-orange !px-8 sm:!px-10 !h-10 sm:!h-12 !border-none">
+                            <span className="font-montserrat font-bold text-sm sm:text-lg text-white">
                                 Buy Now
                             </span>
                         </Commonbuttun>
                         <button
                             onClick={handleAddToCart}
-                            className='w-[62px] h-[62px] rounded-md flex items-center justify-center border border-orange'
+                            className="w-[50px] h-[50px] sm:w-[62px] sm:h-[62px] rounded-md flex items-center justify-center border border-orange"
                         >
-                            <LiaOpencart size={30} color="#ff624c" className='hover:text-white' />
+                            <LiaOpencart size={iconSize} color="#ff624c" className="hover:text-white" />
                         </button>
                     </div>
                 </div>

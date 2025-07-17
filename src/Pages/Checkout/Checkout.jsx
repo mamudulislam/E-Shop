@@ -34,7 +34,7 @@ const Checkout = () => {
                     <h1 className='mt-[48px] text-black01 font-Poppins font-bold text-[56px] text-center'>
                         Checkout
                     </h1>
-                    <div className='grid grid-cols-[2fr_1fr] gap-x-[56px] mt-20'>
+                    <div className='grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-x-[56px] mt-20'>
                         <div>
                             <Billingdetails formikRef={formikRef} />
                         </div>

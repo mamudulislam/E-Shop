@@ -49,15 +49,17 @@ const BlogDetails = () => {
                         <div className="mb-10">
                             <div className="p-8 sm:p-10 bg-orange rounded-2xl">
                                 <h3 className="font-Poppins font-semibold text-xl sm:text-2xl text-white mb-6">Blog Search</h3>
-                                <div className="flex items-center gap-3 bg-white rounded-md px-4">
+                                <div className="flex items-center gap-3 bg-white rounded-md px-4 relative">
                                     <input
                                         type="text"
                                         placeholder="Search Article ..."
                                         className="flex-1 py-3 px-4 outline-none text-black text-base sm:text-lg"
                                     />
-                                    <button type="submit" className="text-gray-500 hover:text-black transition-colors duration-200">
-                                        <CiSearch size={24} />
-                                    </button>
+                                    <div className="absolute right-3">
+                                        <button type="submit" className="text-gray-500 hover:text-black transition-colors duration-200 ">
+                                            <CiSearch size={24} />
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -12,9 +12,11 @@ const Contact = () => {
                 <title>Contact</title>
             </Helmet>
             <Container>
-                <MapLayout />
-                <ContactBody />
-                <Subscribe />
+                <div className="space-y-12 md:space-y-16 lg:space-y-20">
+                    <MapLayout />
+                    <ContactBody />
+                    <Subscribe />
+                </div>
             </Container>
         </>
     )
