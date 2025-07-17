@@ -35,7 +35,6 @@ const BlogDetails = () => {
                 <title>{blog.title} - Blog Details</title>
             </Helmet>
             <Container>
-                {/* Breadcrumb */}
                 <div className="mt-16 px-4 sm:px-6 md:px-12 mb-24">
                     <div className="flex flex-wrap items-center gap-x-4 font-montserrat text-black01 text-sm sm:text-base">
                         <Link to="/" className="hover:underline">Home</Link>
@@ -45,13 +44,8 @@ const BlogDetails = () => {
                         <span className="font-bold truncate max-w-xs sm:max-w-md">{blog.title}</span>
                     </div>
                 </div>
-
-                {/* Main Grid: Sidebar + Content */}
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 lg:gap-[56px] px-4 sm:px-6 md:px-12 mb-20">
-
-                    {/* Sidebar */}
                     <aside className="w-full max-w-md mx-auto lg:max-w-none lg:mx-0">
-                        {/* Blog Search */}
                         <div className="mb-10">
                             <div className="p-8 sm:p-10 bg-orange rounded-2xl">
                                 <h3 className="font-Poppins font-semibold text-xl sm:text-2xl text-white mb-6">Blog Search</h3>
@@ -67,8 +61,6 @@ const BlogDetails = () => {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Categories */}
                         <div className="mb-10">
                             <div className="p-8 sm:p-10 bg-black01 rounded-2xl">
                                 <h4 className="font-Poppins font-semibold text-xl sm:text-2xl text-white mb-6">Categories</h4>
@@ -94,7 +86,6 @@ const BlogDetails = () => {
                             </div>
                         </div>
 
-                        {/* Tags */}
                         <div className="p-5 sm:p-8 bg-white02 rounded-2xl mb-10">
                             <h4 className="font-Poppins font-semibold text-xl sm:text-2xl text-black mb-6">Tags</h4>
                             <div className="space-y-3">
@@ -120,8 +111,6 @@ const BlogDetails = () => {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Recent Posts */}
                         <div>
                             <h3 className="font-Poppins font-semibold text-xl sm:text-2xl text-black01 mb-2">Recent Posts</h3>
                             <div className="h-1.5 w-28 sm:w-40 bg-orange mb-8 rounded" />
@@ -172,8 +161,6 @@ const BlogDetails = () => {
                             </div>
                         </div>
                     </aside>
-
-                    {/* Blog Content */}
                     <article className="pr-0 lg:pr-[110px]">
                         <h1 className="font-poppins font-bold text-4xl sm:text-5xl md:text-[56px] text-black01 mb-4 leading-tight sm:leading-[68px]">
                             {blog.title}
@@ -280,7 +267,6 @@ const BlogDetails = () => {
                     </article>
                 </div>
 
-                {/* Related Articles Section */}
                 <section className="mt-20 px-4 sm:px-6 md:px-12">
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
                         <h2 className="font-Poppins font-semibold text-2xl sm:text-3xl text-black01">
@@ -296,12 +282,10 @@ const BlogDetails = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
                         {[
-                            // 1 from same category
                             ...TechTalksData.filter(
                                 (item) => item.category === blog.category && item.id !== blog.id
                             ).slice(0, 1),
 
-                            // 2 from other categories
                             ...TechTalksData.filter(
                                 (item) => item.category !== blog.category && item.id !== blog.id
                             ).slice(0, 2),
