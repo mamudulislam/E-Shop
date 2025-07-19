@@ -1,7 +1,6 @@
 import React from 'react'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import Home from './Pages/Home/Home'
-import ProductDetails from './Pages/ProductDetails/ProductDetails'
 import Product from './Pages/Product/Product'
 import Cart from './Pages/Cart/Cart'
 import Checkout from './Pages/Checkout/Checkout'
@@ -12,6 +11,7 @@ import Singelproducts from './Pages/Product/Components/Singelproducts/Singelprod
 import Payment from './Pages/Checkout/Componentes/Payment'
 import Blogdetailes from './Pages/Blogdetailes/Blogdetailes'
 import Register from './Pages/Register/Register'
+import Profile from './Pages/Profile/Profile'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -28,6 +28,7 @@ const App = () => {
           <Route path='/Contact' element={<Contact />} />
           <Route path='/Payment' element={<Payment />} />
           <Route path='/sing-up' element={<Register />} />
+          <Route path='/User-profile' element={<Profile />} />
         </Route >
       </Route >
 
