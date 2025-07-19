@@ -12,7 +12,6 @@ const ContactBody = () => {
 
     return (
         <div className="grid gap-x-6 gap-y-10 md:grid-cols-[2fr_1fr]">
-            {/* Left side - Form and breadcrumb */}
             <div>
                 <h1 className="font-montserrat text-black01 my-16 md:my-16">
                     <Link className="font-normal" to="/">
@@ -23,7 +22,6 @@ const ContactBody = () => {
                 <ContactForm />
             </div>
 
-            {/* Right side - Contact info */}
             <div>
                 <div className="bg-white02 p-10 rounded-[25px] md:mt-40 mt-0">
                     <h3 className="font-Poppins font-semibold text-2xl text-black01 pb-4">Let’s Keep in Touch!</h3>

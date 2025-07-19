@@ -28,15 +28,17 @@ const Searchwhiteauthandcrt = () => {
             </Link>
 
             <div className='w-[1px] h-[32px] bg-black01'></div>
-            <div className='flex items-center gap-x-5'>
-                <div>
-                    <FiUser size={25} />
+            <Link to="/sing-up">
+                <div className='flex items-center gap-x-5'>
+                    <div>
+                        <FiUser size={25} />
+                    </div>
+                    <div>
+                        <h6 className='font-Montserrat text-base text-black01'>{t('User')}</h6>
+                        <span className='font-Montserrat text-base text-black01 font-bold'>{t('Account')}</span>
+                    </div>
                 </div>
-                <div>
-                    <h6 className='font-Montserrat text-base text-black01'>{t('User')}</h6>
-                    <span className='font-Montserrat text-base text-black01 font-bold'>{t('Account')}</span>
-                </div>
-            </div>
+            </Link>
         </div >
     );
 };
