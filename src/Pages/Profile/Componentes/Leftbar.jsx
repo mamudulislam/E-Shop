@@ -1,6 +1,6 @@
 import React from "react";
 import { IoLogOutOutline } from "react-icons/io5";
-import { OrderIcon, UserIcon } from "../../../assets/svg/UserProfileIcons";
+import { OrderIcon, UserIcon } from "../../../assets/SVG/UserProfileIcons";
 
 const LeftBar = ({ setOptions }) => {
     return (
